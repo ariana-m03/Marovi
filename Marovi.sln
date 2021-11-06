@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marovi", "Marovi\Marovi.csproj", "{B663F15C-0AB2-46C8-A34D-F648D191F06D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csproj", "{7120F259-3C05-4F97-9E53-5A1F0820333B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B663F15C-0AB2-46C8-A34D-F648D191F06D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B663F15C-0AB2-46C8-A34D-F648D191F06D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B663F15C-0AB2-46C8-A34D-F648D191F06D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B663F15C-0AB2-46C8-A34D-F648D191F06D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7120F259-3C05-4F97-9E53-5A1F0820333B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7120F259-3C05-4F97-9E53-5A1F0820333B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7120F259-3C05-4F97-9E53-5A1F0820333B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7120F259-3C05-4F97-9E53-5A1F0820333B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D4027F5B-85E8-4927-8E1F-D38DC7018292}
+	EndGlobalSection
+EndGlobal
