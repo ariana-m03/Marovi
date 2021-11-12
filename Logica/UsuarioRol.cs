@@ -14,5 +14,13 @@ namespace Logica
         public int IDUsuarioRol { get; set; }
         public string Rol { get; set; }
 
+        public DataTable Listar()
+        {
+            DataTable R = new DataTable();
+            Conexion MyCnn = new Conexion();
+            R = MyCnn.DMLSelect("SPUsuarioRolListar");
+            return R;
+        }
+
     }
 }

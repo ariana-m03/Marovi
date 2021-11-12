@@ -120,6 +120,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\FrmClientesGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmClientesGestion.Designer.cs">
+      <DependentUpon>FrmClientesGestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,14 +138,45 @@
     <Compile Include="Formularios\FrmPrincipal.Designer.cs">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmProductosGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmProductosGestion.Designer.cs">
+      <DependentUpon>FrmProductosGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmProveedoresGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmProveedoresGestion.Designer.cs">
+      <DependentUpon>FrmProveedoresGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmUsuariosGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmUsuariosGestion.Designer.cs">
+      <DependentUpon>FrmUsuariosGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Herramientas.cs" />
     <Compile Include="Locales\ObjetosGlobales.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\FrmClientesGestion.resx">
+      <DependentUpon>FrmClientesGestion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmLogIn.resx">
       <DependentUpon>FrmLogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmProductosGestion.resx">
+      <DependentUpon>FrmProductosGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmProveedoresGestion.resx">
+      <DependentUpon>FrmProveedoresGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmUsuariosGestion.resx">
+      <DependentUpon>FrmUsuariosGestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -179,6 +216,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Marovi.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

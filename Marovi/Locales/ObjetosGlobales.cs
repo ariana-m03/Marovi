@@ -13,6 +13,14 @@ namespace Marovi.Locales
 
         public static Logica.Usuario MiUsuarioGlobal = new Logica.Usuario();
 
-        //public static Formularios.FrmUsuariosGestion MiFormGestionUsuarios = new Formularios.FrmUsuariosGestion();
+        public static Formularios.FrmUsuariosGestion MiFormGestionUsuarios = new Formularios.FrmUsuariosGestion();
+
+        public static Formularios.FrmProductosGestion MiFormGestionProductos = new Formularios.FrmProductosGestion();
+
+        public static Formularios.FrmProveedoresGestion MiFormGestionProveedores = new Formularios.FrmProveedoresGestion();
+
+        public static Formularios.FrmClientesGestion MiFormGestionClientes = new Formularios.FrmClientesGestion();
+
+
     }
 }

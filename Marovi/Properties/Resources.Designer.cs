@@ -63,6 +63,16 @@ namespace Marovi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Marovi {
+            get {
+                object obj = ResourceManager.GetObject("Marovi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Marovi_PhotoRoom__1_ {
             get {
                 object obj = ResourceManager.GetObject("Marovi-PhotoRoom (1)", resourceCulture);

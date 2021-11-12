@@ -77,5 +77,10 @@ namespace Marovi.Formularios
         {
 
         }
+
+        private void TxtUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
