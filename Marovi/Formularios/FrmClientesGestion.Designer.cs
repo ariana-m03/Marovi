@@ -39,6 +39,9 @@ namespace Marovi.Formularios
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.CbVerClientesActivos = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.CbActivo = new System.Windows.Forms.CheckBox();
             this.TxtDireccion = new System.Windows.Forms.TextBox();
             this.TxtCorreo = new System.Windows.Forms.TextBox();
@@ -57,9 +60,6 @@ namespace Marovi.Formularios
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLista)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -80,13 +80,16 @@ namespace Marovi.Formularios
             this.DgvLista.RowHeadersVisible = false;
             this.DgvLista.RowHeadersWidth = 51;
             this.DgvLista.RowTemplate.Height = 24;
+            this.DgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvLista.Size = new System.Drawing.Size(1011, 150);
             this.DgvLista.TabIndex = 0;
+            this.DgvLista.VirtualMode = true;
             this.DgvLista.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLista_CellClick);
             // 
             // ColIDCliente
             // 
             this.ColIDCliente.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColIDCliente.DataPropertyName = "IDCliente";
             this.ColIDCliente.HeaderText = "Código";
             this.ColIDCliente.MinimumWidth = 6;
             this.ColIDCliente.Name = "ColIDCliente";
@@ -95,6 +98,7 @@ namespace Marovi.Formularios
             // 
             // ColCedula
             // 
+            this.ColCedula.DataPropertyName = "Cedula";
             this.ColCedula.HeaderText = "Cédula";
             this.ColCedula.MinimumWidth = 6;
             this.ColCedula.Name = "ColCedula";
@@ -104,6 +108,7 @@ namespace Marovi.Formularios
             // ColNombre
             // 
             this.ColNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColNombre.DataPropertyName = "Nombre";
             this.ColNombre.HeaderText = "Nombre";
             this.ColNombre.MinimumWidth = 6;
             this.ColNombre.Name = "ColNombre";
@@ -112,6 +117,7 @@ namespace Marovi.Formularios
             // ColCorreo
             // 
             this.ColCorreo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColCorreo.DataPropertyName = "Correo";
             this.ColCorreo.HeaderText = "Email";
             this.ColCorreo.MinimumWidth = 6;
             this.ColCorreo.Name = "ColCorreo";
@@ -172,6 +178,39 @@ namespace Marovi.Formularios
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(395, 61);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(15, 20);
+            this.label9.TabIndex = 22;
+            this.label9.Text = "*";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(745, 63);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(15, 20);
+            this.label8.TabIndex = 21;
+            this.label8.Text = "*";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Red;
+            this.label12.Location = new System.Drawing.Point(6, 157);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(15, 20);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "*";
+            // 
             // CbActivo
             // 
             this.CbActivo.AutoSize = true;
@@ -223,6 +262,7 @@ namespace Marovi.Formularios
             // 
             this.TxtCod.Location = new System.Drawing.Point(23, 61);
             this.TxtCod.Name = "TxtCod";
+            this.TxtCod.ReadOnly = true;
             this.TxtCod.Size = new System.Drawing.Size(228, 22);
             this.TxtCod.TabIndex = 5;
             // 
@@ -351,39 +391,6 @@ namespace Marovi.Formularios
             this.BtnCancelar.UseVisualStyleBackColor = false;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(6, 157);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(15, 20);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "*";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(745, 63);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(15, 20);
-            this.label8.TabIndex = 21;
-            this.label8.Text = "*";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(395, 61);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(15, 20);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "*";
-            // 
             // FrmClientesGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -438,12 +445,12 @@ namespace Marovi.Formularios
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Button BtnLimpiar;
         private System.Windows.Forms.Button BtnCancelar;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColIDCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCedula;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCorreo;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label9;
     }
 }

@@ -44,7 +44,7 @@ namespace Marovi.Formularios
         private void LimpiarFormulario()
         {
             TxtCod.Clear();
-            TxtCedula.Text = TxtCedula.Tag.ToString();
+            TxtCedula.Clear();
             TxtNombre.Clear();
 
             TxtTelefono.Clear();
@@ -60,7 +60,6 @@ namespace Marovi.Formularios
             bool R = false;
 
             if (!string.IsNullOrEmpty(TxtCedula.Text.Trim()) &&
-                TxtCedula.Text.Trim() != TxtCedula.Tag.ToString() &&
                 !string.IsNullOrEmpty(TxtNombre.Text.Trim()) &&
                 !string.IsNullOrEmpty(TxtDireccion.Text.Trim()) &&
                 !string.IsNullOrEmpty(TxtTelefono.Text.Trim())
@@ -167,30 +166,6 @@ namespace Marovi.Formularios
             }
         }
 
-        private void TxtCedula_TextChanged(object sender, EventArgs e)
-        {
-            TxtCedula.ForeColor = Color.Black;
-            if (TxtCedula.Text == TxtCedula.Tag.ToString())
-            {
-                TxtCedula.ForeColor = Color.LightGray;
-            }
-        }
-
-        private void TxtCedula_Enter(object sender, EventArgs e)
-        {
-            if (TxtCedula.Text == TxtCedula.Tag.ToString())
-            {
-                TxtCedula.Clear();
-            }
-        }
-
-        private void TxtCedula_Leave(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(TxtCedula.Text.Trim()))
-            {
-                TxtCedula.Text = TxtCedula.Tag.ToString();
-            }
-        }
         private void BtnEditar_Click(object sender, EventArgs e)
         {
             if (ValidarDatosRequeridos())
@@ -291,7 +266,7 @@ namespace Marovi.Formularios
                 LimpiarFormulario();
                 DataGridViewRow MiFila = DgvLista.SelectedRows[0];
 
-                int IdCliente = Convert.ToInt32(MiFila.Cells["CIDCliente"].Value);
+                int IdCliente = Convert.ToInt32(MiFila.Cells["ColIDCliente"].Value);
 
                 MiClienteLocal = new Logica.Cliente();
                 MiClienteLocal = MiClienteLocal.Consultar(IdCliente);

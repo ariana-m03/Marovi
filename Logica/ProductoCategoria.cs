@@ -13,5 +13,13 @@ namespace Logica
     {
         public int IDCategoria { get; set; }
         public string Categoria { get; set; }
+
+        public DataTable Listar()
+        {
+            DataTable R = new DataTable();
+            Conexion MyCnn = new Conexion();
+            R = MyCnn.DMLSelect("SPProductoCategoriaListar");
+            return R;
+        }
     }
 }
