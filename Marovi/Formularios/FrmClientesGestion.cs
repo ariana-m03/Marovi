@@ -295,6 +295,7 @@ namespace Marovi.Formularios
                 LlenarListaClientes(CbVerClientesActivos.Checked);
             }
         }
-       
+
+        
     }
 }

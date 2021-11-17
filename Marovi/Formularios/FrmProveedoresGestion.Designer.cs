@@ -32,31 +32,31 @@ namespace Marovi.Formularios
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProveedoresGestion));
             this.DgvLista = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ColCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColCedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TxtDireccion = new System.Windows.Forms.TextBox();
+            this.TxtCorreo = new System.Windows.Forms.TextBox();
+            this.TxtTelefono = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.TxtCedula = new System.Windows.Forms.TextBox();
+            this.TxtCod = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.CbActivo = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.CbActivo = new System.Windows.Forms.CheckBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.TxtCod = new System.Windows.Forms.TextBox();
-            this.TxtCedula = new System.Windows.Forms.TextBox();
-            this.TxtNombre = new System.Windows.Forms.TextBox();
-            this.TxtTelefono = new System.Windows.Forms.TextBox();
-            this.TxtCorreo = new System.Windows.Forms.TextBox();
-            this.TxtDireccion = new System.Windows.Forms.TextBox();
             this.BtnAgregar = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.CbVerProveedoresActivos = new System.Windows.Forms.CheckBox();
+            this.ColCodigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColCedula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLista)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -104,39 +104,114 @@ namespace Marovi.Formularios
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // ColCodigo
+            // TxtDireccion
             // 
-            this.ColCodigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColCodigo.HeaderText = "Código";
-            this.ColCodigo.MinimumWidth = 6;
-            this.ColCodigo.Name = "ColCodigo";
-            this.ColCodigo.ReadOnly = true;
-            this.ColCodigo.Width = 80;
+            this.TxtDireccion.Location = new System.Drawing.Point(743, 148);
+            this.TxtDireccion.Multiline = true;
+            this.TxtDireccion.Name = "TxtDireccion";
+            this.TxtDireccion.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.TxtDireccion.Size = new System.Drawing.Size(228, 94);
+            this.TxtDireccion.TabIndex = 12;
             // 
-            // ColCedula
+            // TxtCorreo
             // 
-            this.ColCedula.HeaderText = "Cédula";
-            this.ColCedula.MinimumWidth = 6;
-            this.ColCedula.Name = "ColCedula";
-            this.ColCedula.ReadOnly = true;
-            this.ColCedula.Width = 125;
+            this.TxtCorreo.Location = new System.Drawing.Point(743, 59);
+            this.TxtCorreo.Name = "TxtCorreo";
+            this.TxtCorreo.Size = new System.Drawing.Size(228, 22);
+            this.TxtCorreo.TabIndex = 11;
             // 
-            // ColNombre
+            // TxtTelefono
             // 
-            this.ColNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColNombre.HeaderText = "Nombre";
-            this.ColNombre.MinimumWidth = 6;
-            this.ColNombre.Name = "ColNombre";
-            this.ColNombre.ReadOnly = true;
+            this.TxtTelefono.Location = new System.Drawing.Point(385, 148);
+            this.TxtTelefono.Name = "TxtTelefono";
+            this.TxtTelefono.Size = new System.Drawing.Size(228, 22);
+            this.TxtTelefono.TabIndex = 10;
             // 
-            // ColCorreo
+            // TxtNombre
             // 
-            this.ColCorreo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColCorreo.HeaderText = "Email";
-            this.ColCorreo.MinimumWidth = 6;
-            this.ColCorreo.Name = "ColCorreo";
-            this.ColCorreo.ReadOnly = true;
-            this.ColCorreo.Width = 250;
+            this.TxtNombre.Location = new System.Drawing.Point(385, 59);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(228, 22);
+            this.TxtNombre.TabIndex = 9;
+            // 
+            // TxtCedula
+            // 
+            this.TxtCedula.Location = new System.Drawing.Point(19, 148);
+            this.TxtCedula.Name = "TxtCedula";
+            this.TxtCedula.Size = new System.Drawing.Size(228, 22);
+            this.TxtCedula.TabIndex = 8;
+            // 
+            // TxtCod
+            // 
+            this.TxtCod.Location = new System.Drawing.Point(19, 59);
+            this.TxtCod.Name = "TxtCod";
+            this.TxtCod.ReadOnly = true;
+            this.TxtCod.Size = new System.Drawing.Size(228, 22);
+            this.TxtCod.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(740, 113);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(67, 17);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Dirección";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(740, 28);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(125, 17);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "Correo Electrónico";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(382, 113);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(64, 17);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Teléfono";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(382, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 17);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Nombre";
+            // 
+            // CbActivo
+            // 
+            this.CbActivo.AutoSize = true;
+            this.CbActivo.Location = new System.Drawing.Point(25, 221);
+            this.CbActivo.Name = "CbActivo";
+            this.CbActivo.Size = new System.Drawing.Size(68, 21);
+            this.CbActivo.TabIndex = 2;
+            this.CbActivo.Text = "Activo";
+            this.CbActivo.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(16, 113);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 17);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Cédula";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(16, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Código";
             // 
             // label1
             // 
@@ -153,114 +228,7 @@ namespace Marovi.Formularios
             this.TxtBuscar.Name = "TxtBuscar";
             this.TxtBuscar.Size = new System.Drawing.Size(300, 22);
             this.TxtBuscar.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Código";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 113);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 17);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Cédula";
-            // 
-            // CbActivo
-            // 
-            this.CbActivo.AutoSize = true;
-            this.CbActivo.Location = new System.Drawing.Point(25, 221);
-            this.CbActivo.Name = "CbActivo";
-            this.CbActivo.Size = new System.Drawing.Size(68, 21);
-            this.CbActivo.TabIndex = 2;
-            this.CbActivo.Text = "Activo";
-            this.CbActivo.UseVisualStyleBackColor = true;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(382, 28);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 17);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Nombre";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(382, 113);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 17);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Teléfono";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(740, 28);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(125, 17);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Correo Electrónico";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(740, 113);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(67, 17);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Dirección";
-            // 
-            // TxtCod
-            // 
-            this.TxtCod.Location = new System.Drawing.Point(19, 59);
-            this.TxtCod.Name = "TxtCod";
-            this.TxtCod.Size = new System.Drawing.Size(228, 22);
-            this.TxtCod.TabIndex = 7;
-            // 
-            // TxtCedula
-            // 
-            this.TxtCedula.Location = new System.Drawing.Point(19, 148);
-            this.TxtCedula.Name = "TxtCedula";
-            this.TxtCedula.Size = new System.Drawing.Size(228, 22);
-            this.TxtCedula.TabIndex = 8;
-            // 
-            // TxtNombre
-            // 
-            this.TxtNombre.Location = new System.Drawing.Point(385, 59);
-            this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(228, 22);
-            this.TxtNombre.TabIndex = 9;
-            // 
-            // TxtTelefono
-            // 
-            this.TxtTelefono.Location = new System.Drawing.Point(385, 148);
-            this.TxtTelefono.Name = "TxtTelefono";
-            this.TxtTelefono.Size = new System.Drawing.Size(228, 22);
-            this.TxtTelefono.TabIndex = 10;
-            // 
-            // TxtCorreo
-            // 
-            this.TxtCorreo.Location = new System.Drawing.Point(743, 59);
-            this.TxtCorreo.Name = "TxtCorreo";
-            this.TxtCorreo.Size = new System.Drawing.Size(228, 22);
-            this.TxtCorreo.TabIndex = 11;
-            // 
-            // TxtDireccion
-            // 
-            this.TxtDireccion.Location = new System.Drawing.Point(743, 148);
-            this.TxtDireccion.Multiline = true;
-            this.TxtDireccion.Name = "TxtDireccion";
-            this.TxtDireccion.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.TxtDireccion.Size = new System.Drawing.Size(228, 94);
-            this.TxtDireccion.TabIndex = 12;
+            this.TxtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
             // 
             // BtnAgregar
             // 
@@ -345,6 +313,45 @@ namespace Marovi.Formularios
             this.CbVerProveedoresActivos.TabIndex = 8;
             this.CbVerProveedoresActivos.Text = "Ver Proveedores Activos";
             this.CbVerProveedoresActivos.UseVisualStyleBackColor = true;
+            this.CbVerProveedoresActivos.CheckedChanged += new System.EventHandler(this.CbVerProveedoresActivos_CheckedChanged);
+            // 
+            // ColCodigo
+            // 
+            this.ColCodigo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColCodigo.DataPropertyName = "IDProveedor";
+            this.ColCodigo.HeaderText = "Código";
+            this.ColCodigo.MinimumWidth = 6;
+            this.ColCodigo.Name = "ColCodigo";
+            this.ColCodigo.ReadOnly = true;
+            this.ColCodigo.Width = 80;
+            // 
+            // ColCedula
+            // 
+            this.ColCedula.DataPropertyName = "Cedula";
+            this.ColCedula.HeaderText = "Cédula";
+            this.ColCedula.MinimumWidth = 6;
+            this.ColCedula.Name = "ColCedula";
+            this.ColCedula.ReadOnly = true;
+            this.ColCedula.Width = 125;
+            // 
+            // ColNombre
+            // 
+            this.ColNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColNombre.DataPropertyName = "Nombre";
+            this.ColNombre.HeaderText = "Nombre";
+            this.ColNombre.MinimumWidth = 6;
+            this.ColNombre.Name = "ColNombre";
+            this.ColNombre.ReadOnly = true;
+            // 
+            // ColCorreo
+            // 
+            this.ColCorreo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColCorreo.DataPropertyName = "Correo";
+            this.ColCorreo.HeaderText = "Email";
+            this.ColCorreo.MinimumWidth = 6;
+            this.ColCorreo.Name = "ColCorreo";
+            this.ColCorreo.ReadOnly = true;
+            this.ColCorreo.Width = 250;
             // 
             // FrmProveedoresGestion
             // 
@@ -379,10 +386,6 @@ namespace Marovi.Formularios
 
         private System.Windows.Forms.DataGridView DgvLista;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColCodigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColCedula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColNombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColCorreo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -404,5 +407,9 @@ namespace Marovi.Formularios
         private System.Windows.Forms.Button BtnLimpiar;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.CheckBox CbVerProveedoresActivos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColCodigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColCedula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColCorreo;
     }
 }

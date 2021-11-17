@@ -59,7 +59,7 @@ namespace Logica
                 MiCnn.ParamList.Add(new SqlParameter("@FechaCaducidad", this.FechaCaducidad));
                 
                 MiCnn.ParamList.Add(new SqlParameter("@IdProductoCategoria", this.Categoria.IDCategoria));
-                MiCnn.ParamList.Add(new SqlParameter("@Activo", this.Activo));
+                
 
 
                 int retorno = MiCnn.DMLUpdateDeleteInsert("SPProductoAgregar");
@@ -87,7 +87,7 @@ namespace Logica
                 MiCnn.ParamList.Add(new SqlParameter("@Id", this.IDProducto));
                 MiCnn.ParamList.Add(new SqlParameter("@Nombre", this.Nombre));
                 MiCnn.ParamList.Add(new SqlParameter("@Descripcion", this.Descripcion));
-                MiCnn.ParamList.Add(new SqlParameter("@CodigoDeBarras", this.CodigoBarras));
+                MiCnn.ParamList.Add(new SqlParameter("@CodigoBarras", this.CodigoBarras));
                 MiCnn.ParamList.Add(new SqlParameter("@StockInicial", this.StockInicial));
                 MiCnn.ParamList.Add(new SqlParameter("@Entradas", this.Entradas));
                 MiCnn.ParamList.Add(new SqlParameter("@Salidas", this.Salidas));
@@ -98,7 +98,6 @@ namespace Logica
                 MiCnn.ParamList.Add(new SqlParameter("@FechaIngreso", this.FechaIngreso));
                 MiCnn.ParamList.Add(new SqlParameter("@FechaCaducidad", this.FechaCaducidad));
                 MiCnn.ParamList.Add(new SqlParameter("@IdCategoria", this.Categoria.IDCategoria));
-                MiCnn.ParamList.Add(new SqlParameter("@Activo", this.Activo));
 
 
                 int retorno = MiCnn.DMLUpdateDeleteInsert("SPProductoEditar");
@@ -136,6 +135,7 @@ namespace Logica
                 R.IDProducto = Convert.ToInt32(MiFila["IDProducto"]);
                 R.Nombre = Convert.ToString(MiFila["Nombre"]);
                 R.Descripcion = Convert.ToString(MiFila["Descripcion"]);
+                R.CodigoBarras = Convert.ToString(MiFila["CodigoBarras"]);
                 R.StockInicial = Convert.ToInt32(MiFila["StockInicial"]);
                 R.Entradas = Convert.ToInt32(MiFila["Entradas"]);
                 R.Salidas = Convert.ToInt32(MiFila["Salidas"]);

@@ -85,6 +85,7 @@ namespace Marovi.Formularios
             this.DgvLista.TabIndex = 0;
             this.DgvLista.VirtualMode = true;
             this.DgvLista.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLista_CellClick);
+            
             // 
             // ColIDCliente
             // 

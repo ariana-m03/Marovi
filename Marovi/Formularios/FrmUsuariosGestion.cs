@@ -237,7 +237,7 @@ namespace Marovi.Formularios
                 MiUsuario.Telefono = TxtTelefono.Text.Trim();
                 MiUsuario.Username = TxtCorreo.Text.Trim();
                 MiUsuario.Direccion = TxtDireccion.Text.Trim();
-                MiUsuario.Contrasena = "";
+                MiUsuario.Contrasena = string.Empty;
 
                 if (FlagCambioPassword)
                 {
@@ -338,6 +338,12 @@ namespace Marovi.Formularios
 
         private void TxtPass_TextChanged(object sender, EventArgs e)
         {
+            
+
+        }
+
+        private void TxtPass_Leave(object sender, EventArgs e)
+        {
             if (!string.IsNullOrEmpty(TxtPass.Text.Trim()) && BtnEditar.Enabled)
             {
                 FlagCambioPassword = true;
@@ -346,8 +352,6 @@ namespace Marovi.Formularios
             {
                 FlagCambioPassword = false;
             }
-
         }
-
     }
 }

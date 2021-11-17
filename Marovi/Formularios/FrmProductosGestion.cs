@@ -107,15 +107,12 @@ namespace Marovi.Formularios
         {
             bool R = false;
 
-            if (!string.IsNullOrEmpty(TxtCod.Text.Trim()) &&
-                !string.IsNullOrEmpty(TxtStockFinal.Text.Trim()) &&
+            if (!string.IsNullOrEmpty(TxtStockFinal.Text.Trim()) &&
                 !string.IsNullOrEmpty(TxtUnitario.Text.Trim()) &&
                 !string.IsNullOrEmpty(TxtXMayor.Text.Trim()) &&
-                DtpIngreso.Value.Date <= DateTime.Now.Date &&
-                DtpCaducidad.Value.Date <= DateTime.Now.Date &&
                 CboxCategoria.SelectedIndex > -1)
             {
-                if (!BtnEditar.Enabled)
+                if (BtnEditar.Enabled)
                 {
                     R = true;
                 }
@@ -151,7 +148,7 @@ namespace Marovi.Formularios
                     MiProducto.StockFinal = Convert.ToInt32(TxtStockFinal.Text.Trim());
                     MiProducto.Peso = TxtPeso.Text.Trim();
                     MiProducto.PrecioUnitario = Convert.ToDecimal(TxtUnitario.Text.Trim());
-                    MiProducto.PrecioUnitario = Convert.ToDecimal(TxtXMayor.Text.Trim());
+                    MiProducto.PrecioPorMayor = Convert.ToDecimal(TxtXMayor.Text.Trim());
                     MiProducto.FechaIngreso = DtpIngreso.Value.Date;
                     MiProducto.FechaCaducidad = DtpCaducidad.Value.Date;
                     MiProducto.Categoria.IDCategoria = Convert.ToInt32(CboxCategoria.SelectedValue);
@@ -197,6 +194,8 @@ namespace Marovi.Formularios
                 MiProducto.Descripcion = TxtDescripcion.Text.Trim();
                 MiProducto.CodigoBarras = TxtCodigoBarras.Text.Trim();
                 MiProducto.StockInicial = Convert.ToInt32(TxtStockInicial.Text.Trim());
+                MiProducto.Entradas = Convert.ToInt32(TxtEntradas.Text.Trim());
+                MiProducto.Salidas = Convert.ToInt32(TxtSalidas.Text.Trim());
                 MiProducto.StockFinal = Convert.ToInt32(TxtStockFinal.Text.Trim());
                 MiProducto.Peso = TxtPeso.Text.Trim();
                 MiProducto.PrecioUnitario = Convert.ToDecimal(TxtUnitario.Text.Trim());
@@ -314,8 +313,8 @@ namespace Marovi.Formularios
                 TxtPeso.Text = MiProductoLocal.Peso;
                 TxtUnitario.Text = MiProductoLocal.PrecioUnitario.ToString();
                 TxtXMayor.Text = MiProductoLocal.PrecioPorMayor.ToString();
-                DtpIngreso.Value = DateTime.Now.Date;
-                DtpCaducidad.Value = DateTime.Now.Date;
+                DtpIngreso.Value = MiProductoLocal.FechaIngreso;
+                DtpCaducidad.Value = MiProductoLocal.FechaCaducidad;
                 CboxCategoria.SelectedValue = MiProductoLocal.Categoria.IDCategoria;
                 CbActivo.Checked = MiProductoLocal.Activo;
 
