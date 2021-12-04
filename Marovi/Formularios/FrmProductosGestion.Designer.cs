@@ -100,7 +100,7 @@ namespace Marovi.Formularios
             this.CbVerProductosActivos.AutoSize = true;
             this.CbVerProductosActivos.Checked = true;
             this.CbVerProductosActivos.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CbVerProductosActivos.Location = new System.Drawing.Point(1193, 31);
+            this.CbVerProductosActivos.Location = new System.Drawing.Point(1258, 28);
             this.CbVerProductosActivos.Name = "CbVerProductosActivos";
             this.CbVerProductosActivos.Size = new System.Drawing.Size(169, 21);
             this.CbVerProductosActivos.TabIndex = 2;
@@ -126,7 +126,7 @@ namespace Marovi.Formularios
             this.DgvLista.RowHeadersWidth = 51;
             this.DgvLista.RowTemplate.Height = 24;
             this.DgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvLista.Size = new System.Drawing.Size(1382, 150);
+            this.DgvLista.Size = new System.Drawing.Size(1415, 150);
             this.DgvLista.TabIndex = 3;
             this.DgvLista.VirtualMode = true;
             this.DgvLista.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLista_CellClick);
@@ -211,7 +211,7 @@ namespace Marovi.Formularios
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 256);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1382, 361);
+            this.groupBox1.Size = new System.Drawing.Size(1415, 361);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
@@ -219,14 +219,14 @@ namespace Marovi.Formularios
             // 
             this.DtpCaducidad.Location = new System.Drawing.Point(1111, 132);
             this.DtpCaducidad.Name = "DtpCaducidad";
-            this.DtpCaducidad.Size = new System.Drawing.Size(254, 22);
+            this.DtpCaducidad.Size = new System.Drawing.Size(271, 22);
             this.DtpCaducidad.TabIndex = 30;
             // 
             // DtpIngreso
             // 
             this.DtpIngreso.Location = new System.Drawing.Point(1111, 61);
             this.DtpIngreso.Name = "DtpIngreso";
-            this.DtpIngreso.Size = new System.Drawing.Size(254, 22);
+            this.DtpIngreso.Size = new System.Drawing.Size(271, 22);
             this.DtpIngreso.TabIndex = 29;
             // 
             // CboxCategoria
@@ -234,7 +234,7 @@ namespace Marovi.Formularios
             this.CboxCategoria.FormattingEnabled = true;
             this.CboxCategoria.Location = new System.Drawing.Point(1111, 215);
             this.CboxCategoria.Name = "CboxCategoria";
-            this.CboxCategoria.Size = new System.Drawing.Size(254, 24);
+            this.CboxCategoria.Size = new System.Drawing.Size(271, 24);
             this.CboxCategoria.TabIndex = 28;
             // 
             // TxtXMayor
@@ -501,7 +501,7 @@ namespace Marovi.Formularios
             this.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLimpiar.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.BtnLimpiar.Location = new System.Drawing.Point(1008, 639);
+            this.BtnLimpiar.Location = new System.Drawing.Point(1090, 639);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(219, 45);
             this.BtnLimpiar.TabIndex = 8;
@@ -515,7 +515,7 @@ namespace Marovi.Formularios
             this.BtnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCancelar.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCancelar.ForeColor = System.Drawing.Color.White;
-            this.BtnCancelar.Location = new System.Drawing.Point(1255, 639);
+            this.BtnCancelar.Location = new System.Drawing.Point(1329, 639);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(98, 45);
             this.BtnCancelar.TabIndex = 9;
@@ -527,7 +527,7 @@ namespace Marovi.Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1408, 706);
+            this.ClientSize = new System.Drawing.Size(1439, 706);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnLimpiar);
             this.Controls.Add(this.BtnEliminar);

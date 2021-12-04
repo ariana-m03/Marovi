@@ -109,6 +109,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -125,6 +126,54 @@
     </Compile>
     <Compile Include="Formularios\FrmClientesGestion.Designer.cs">
       <DependentUpon>FrmClientesGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmFacturaDetalleGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmFacturaDetalleGestion.Designer.cs">
+      <DependentUpon>FrmFacturaDetalleGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmFacturasGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmFacturasGestion.Designer.cs">
+      <DependentUpon>FrmFacturasGestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmListaClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmListaClientes.Designer.cs">
+      <DependentUpon>FrmListaClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmListaFacturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmListaFacturas.Designer.cs">
+      <DependentUpon>FrmListaFacturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmListaProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmListaProductos.Designer.cs">
+      <DependentUpon>FrmListaProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmListaProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmListaProveedores.Designer.cs">
+      <DependentUpon>FrmListaProveedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmListaRutas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmListaRutas.Designer.cs">
+      <DependentUpon>FrmListaRutas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FrmListaUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmListaUsuarios.Designer.cs">
+      <DependentUpon>FrmListaUsuarios.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FrmLogIn.cs">
       <SubType>Form</SubType>
@@ -150,18 +199,57 @@
     <Compile Include="Formularios\FrmProveedoresGestion.Designer.cs">
       <DependentUpon>FrmProveedoresGestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmRutasGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmRutasGestion.Designer.cs">
+      <DependentUpon>FrmRutasGestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmUsuariosGestion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\FrmUsuariosGestion.Designer.cs">
       <DependentUpon>FrmUsuariosGestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FrmVisualizadorReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmVisualizadorReportes.Designer.cs">
+      <DependentUpon>FrmVisualizadorReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Herramientas.cs" />
     <Compile Include="Locales\ObjetosGlobales.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\RptFactura.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptFactura.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Formularios\FrmClientesGestion.resx">
       <DependentUpon>FrmClientesGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmFacturaDetalleGestion.resx">
+      <DependentUpon>FrmFacturaDetalleGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmFacturasGestion.resx">
+      <DependentUpon>FrmFacturasGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmListaClientes.resx">
+      <DependentUpon>FrmListaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmListaProductos.resx">
+      <DependentUpon>FrmListaProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmListaProveedores.resx">
+      <DependentUpon>FrmListaProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmListaRutas.resx">
+      <DependentUpon>FrmListaRutas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmListaUsuarios.resx">
+      <DependentUpon>FrmListaUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmLogIn.resx">
       <DependentUpon>FrmLogIn.cs</DependentUpon>
@@ -175,13 +263,23 @@
     <EmbeddedResource Include="Formularios\FrmProveedoresGestion.resx">
       <DependentUpon>FrmProveedoresGestion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmRutasGestion.resx">
+      <DependentUpon>FrmRutasGestion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmUsuariosGestion.resx">
       <DependentUpon>FrmUsuariosGestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmVisualizadorReportes.resx">
+      <DependentUpon>FrmVisualizadorReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\RptFactura.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptFactura.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -208,9 +306,7 @@
       <Name>Logica</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reportes\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Marovi-PhotoRoom %281%29.png" />
   </ItemGroup>
@@ -219,6 +315,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Marovi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -36,10 +36,21 @@ namespace Marovi.Formularios
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rutasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.listadoDeUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoDeProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoDeProveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listadoDeRutasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.LblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
@@ -69,7 +80,11 @@ namespace Marovi.Formularios
             this.usuariosToolStripMenuItem,
             this.productosToolStripMenuItem,
             this.clientesToolStripMenuItem,
-            this.proveedoresToolStripMenuItem});
+            this.proveedoresToolStripMenuItem,
+            this.rutasToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.rolesToolStripMenuItem,
+            this.categoriasToolStripMenuItem});
             this.mantenimientosToolStripMenuItem.Name = "mantenimientosToolStripMenuItem";
             this.mantenimientosToolStripMenuItem.Size = new System.Drawing.Size(146, 25);
             this.mantenimientosToolStripMenuItem.Text = "Mantenimientos";
@@ -77,30 +92,54 @@ namespace Marovi.Formularios
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
             // clientesToolStripMenuItem
             // 
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
             this.clientesToolStripMenuItem.Text = "Clientes";
             this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // proveedoresToolStripMenuItem
             // 
             this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
             this.proveedoresToolStripMenuItem.Text = "Proveedores";
             this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
+            // 
+            // rutasToolStripMenuItem
+            // 
+            this.rutasToolStripMenuItem.Name = "rutasToolStripMenuItem";
+            this.rutasToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.rutasToolStripMenuItem.Text = "Rutas";
+            this.rutasToolStripMenuItem.Click += new System.EventHandler(this.rutasToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(271, 6);
+            // 
+            // rolesToolStripMenuItem
+            // 
+            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
+            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.rolesToolStripMenuItem.Text = "Roles de Usuario";
+            // 
+            // categoriasToolStripMenuItem
+            // 
+            this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
+            this.categoriasToolStripMenuItem.Text = "Categorías de Productos";
             // 
             // procesosToolStripMenuItem
             // 
@@ -109,17 +148,26 @@ namespace Marovi.Formularios
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
             this.procesosToolStripMenuItem.Size = new System.Drawing.Size(89, 25);
             this.procesosToolStripMenuItem.Text = "Procesos";
+            this.procesosToolStripMenuItem.Click += new System.EventHandler(this.procesosToolStripMenuItem_Click);
             // 
             // gestiónDeFacturasToolStripMenuItem
             // 
             this.gestiónDeFacturasToolStripMenuItem.Name = "gestiónDeFacturasToolStripMenuItem";
             this.gestiónDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(239, 26);
             this.gestiónDeFacturasToolStripMenuItem.Text = "Gestión de Facturas";
+            this.gestiónDeFacturasToolStripMenuItem.Click += new System.EventHandler(this.gestiónDeFacturasToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.reportesDeFacturasToolStripMenuItem});
+            this.reportesDeFacturasToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.listadoDeUsuariosToolStripMenuItem,
+            this.listadoDeProductosToolStripMenuItem,
+            this.listadoDeClientesToolStripMenuItem,
+            this.listadoDeProveedoresToolStripMenuItem,
+            this.listadoDeRutasToolStripMenuItem,
+            this.toolStripSeparator3});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(90, 25);
             this.reportesToolStripMenuItem.Text = "Reportes";
@@ -127,8 +175,54 @@ namespace Marovi.Formularios
             // reportesDeFacturasToolStripMenuItem
             // 
             this.reportesDeFacturasToolStripMenuItem.Name = "reportesDeFacturasToolStripMenuItem";
-            this.reportesDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(248, 26);
+            this.reportesDeFacturasToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
             this.reportesDeFacturasToolStripMenuItem.Text = "Reportes de Facturas";
+            this.reportesDeFacturasToolStripMenuItem.Click += new System.EventHandler(this.reportesDeFacturasToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(262, 6);
+            // 
+            // listadoDeUsuariosToolStripMenuItem
+            // 
+            this.listadoDeUsuariosToolStripMenuItem.Name = "listadoDeUsuariosToolStripMenuItem";
+            this.listadoDeUsuariosToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
+            this.listadoDeUsuariosToolStripMenuItem.Text = "Listado de Usuarios";
+            this.listadoDeUsuariosToolStripMenuItem.Click += new System.EventHandler(this.listadoDeUsuariosToolStripMenuItem_Click_1);
+            // 
+            // listadoDeProductosToolStripMenuItem
+            // 
+            this.listadoDeProductosToolStripMenuItem.Name = "listadoDeProductosToolStripMenuItem";
+            this.listadoDeProductosToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
+            this.listadoDeProductosToolStripMenuItem.Text = "Listado de Productos";
+            this.listadoDeProductosToolStripMenuItem.Click += new System.EventHandler(this.listadoDeProductosToolStripMenuItem_Click);
+            // 
+            // listadoDeClientesToolStripMenuItem
+            // 
+            this.listadoDeClientesToolStripMenuItem.Name = "listadoDeClientesToolStripMenuItem";
+            this.listadoDeClientesToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
+            this.listadoDeClientesToolStripMenuItem.Text = "Listado de Clientes";
+            this.listadoDeClientesToolStripMenuItem.Click += new System.EventHandler(this.listadoDeClientesToolStripMenuItem_Click);
+            // 
+            // listadoDeProveedoresToolStripMenuItem
+            // 
+            this.listadoDeProveedoresToolStripMenuItem.Name = "listadoDeProveedoresToolStripMenuItem";
+            this.listadoDeProveedoresToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
+            this.listadoDeProveedoresToolStripMenuItem.Text = "Listado de Proveedores";
+            this.listadoDeProveedoresToolStripMenuItem.Click += new System.EventHandler(this.listadoDeProveedoresToolStripMenuItem_Click);
+            // 
+            // listadoDeRutasToolStripMenuItem
+            // 
+            this.listadoDeRutasToolStripMenuItem.Name = "listadoDeRutasToolStripMenuItem";
+            this.listadoDeRutasToolStripMenuItem.Size = new System.Drawing.Size(265, 26);
+            this.listadoDeRutasToolStripMenuItem.Text = "Listado de Rutas";
+            this.listadoDeRutasToolStripMenuItem.Click += new System.EventHandler(this.listadoDeRutasToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(262, 6);
             // 
             // acercaDeToolStripMenuItem
             // 
@@ -195,5 +289,16 @@ namespace Marovi.Formularios
         private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem gestiónDeFacturasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reportesDeFacturasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rutasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem listadoDeUsuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listadoDeProductosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listadoDeClientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listadoDeProveedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listadoDeRutasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }

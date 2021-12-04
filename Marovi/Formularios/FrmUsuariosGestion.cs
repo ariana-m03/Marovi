@@ -353,5 +353,10 @@ namespace Marovi.Formularios
                 FlagCambioPassword = false;
             }
         }
+
+        private void DgvLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -85,7 +85,6 @@ namespace Marovi.Formularios
             this.DgvLista.TabIndex = 0;
             this.DgvLista.VirtualMode = true;
             this.DgvLista.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLista_CellClick);
-            
             // 
             // ColIDCliente
             // 
@@ -342,7 +341,7 @@ namespace Marovi.Formularios
             this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEditar.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditar.ForeColor = System.Drawing.Color.White;
-            this.BtnEditar.Location = new System.Drawing.Point(167, 538);
+            this.BtnEditar.Location = new System.Drawing.Point(166, 538);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(107, 42);
             this.BtnEditar.TabIndex = 6;

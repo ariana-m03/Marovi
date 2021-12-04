@@ -9,11 +9,12 @@ using CrystalDecisions.CrystalReports.Engine;
 
 namespace Logica
 {
-    class FacturaDetalle
+    public class FacturaDetalle
     {
         public int Cantidad { get; set; }
+        public decimal TotalMayor { get; set; }
+        public decimal TotalUnitario { get; set; }
 
-        public decimal PrecioFactura { get; set; }
 
         public Producto MiProducto { get; set; }
 

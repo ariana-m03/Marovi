@@ -22,6 +22,9 @@ namespace Marovi.Formularios
         public FrmProveedoresGestion()
         {
             InitializeComponent();
+
+            MiProveedorLocal = new Logica.Proveedor();
+
         }
 
         private void FrmProveedoresGestion_Load(object sender, EventArgs e)

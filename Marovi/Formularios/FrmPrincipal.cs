@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CrystalDecisions.CrystalReports.Engine;
+using Marovi.Reportes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -75,6 +77,91 @@ namespace Marovi.Formularios
             {
                 Locales.ObjetosGlobales.MiFormGestionProveedores = new FrmProveedoresGestion();
                 Locales.ObjetosGlobales.MiFormGestionProveedores.Show();
+            }
+        }
+
+        private void rutasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Locales.ObjetosGlobales.MiFormGestionRutas.Visible)
+            {
+                Locales.ObjetosGlobales.MiFormGestionRutas = new FrmRutasGestion();
+                Locales.ObjetosGlobales.MiFormGestionRutas.Show();
+            }
+        }
+
+        private void procesosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reportesDeFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportDocument MiReport = new ReportDocument();
+
+            MiReport = new Reportes.RptFactura();
+
+            FrmVisualizadorReportes MiFormCRV = new FrmVisualizadorReportes();
+
+            MiFormCRV.CrvVisualizadorReportes.ReportSource = MiReport;
+
+            MiFormCRV.Show();
+
+            MiFormCRV.CrvVisualizadorReportes.Zoom(1);
+
+        }
+
+        private void gestiónDeFacturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Locales.ObjetosGlobales.MiFormGestionFacturas.Visible)
+            {
+                Locales.ObjetosGlobales.MiFormGestionFacturas = new FrmFacturasGestion();
+                Locales.ObjetosGlobales.MiFormGestionFacturas.Show();
+            }
+        }
+
+
+        private void listadoDeUsuariosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            if (!Locales.ObjetosGlobales.MiFormListaUsuarios.Visible)
+            {
+                Locales.ObjetosGlobales.MiFormListaUsuarios = new FrmListaUsuarios();
+                Locales.ObjetosGlobales.MiFormListaUsuarios.Show();
+            }
+        }
+
+        private void listadoDeProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Locales.ObjetosGlobales.MiFormListaProductos.Visible)
+            {
+                Locales.ObjetosGlobales.MiFormListaProductos = new FrmListaProductos();
+                Locales.ObjetosGlobales.MiFormListaProductos.Show();
+            }
+        }
+
+        private void listadoDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Locales.ObjetosGlobales.MiFormListaClientes.Visible)
+            {
+                Locales.ObjetosGlobales.MiFormListaClientes = new FrmListaClientes();
+                Locales.ObjetosGlobales.MiFormListaClientes.Show();
+            }
+        }
+
+        private void listadoDeProveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Locales.ObjetosGlobales.MiFormListaProveedores.Visible)
+            {
+                Locales.ObjetosGlobales.MiFormListaProveedores = new FrmListaProveedores();
+                Locales.ObjetosGlobales.MiFormListaProveedores.Show();
+            }
+        }
+
+        private void listadoDeRutasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Locales.ObjetosGlobales.MiFormListaRutas.Visible)
+            {
+                Locales.ObjetosGlobales.MiFormListaRutas = new FrmListaRutas();
+                Locales.ObjetosGlobales.MiFormListaRutas.Show();
             }
         }
     }
