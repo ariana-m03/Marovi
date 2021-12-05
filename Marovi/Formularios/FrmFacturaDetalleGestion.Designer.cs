@@ -30,17 +30,17 @@ namespace Marovi.Formularios
         private void InitializeComponent()
         {
             this.DgvListaProductos = new System.Windows.Forms.DataGridView();
+            this.CIDProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPrecioMayor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.NudCantidad = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnAceptar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
-            this.CIDProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPrecioMayor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvListaProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NudCantidad)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +65,48 @@ namespace Marovi.Formularios
             this.DgvListaProductos.Size = new System.Drawing.Size(881, 282);
             this.DgvListaProductos.TabIndex = 0;
             this.DgvListaProductos.VirtualMode = true;
+            // 
+            // CIDProducto
+            // 
+            this.CIDProducto.DataPropertyName = "IDProducto";
+            this.CIDProducto.HeaderText = "Código";
+            this.CIDProducto.MinimumWidth = 6;
+            this.CIDProducto.Name = "CIDProducto";
+            this.CIDProducto.Width = 125;
+            // 
+            // CNombre
+            // 
+            this.CNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CNombre.DataPropertyName = "Nombre";
+            this.CNombre.HeaderText = "Descripción";
+            this.CNombre.MinimumWidth = 6;
+            this.CNombre.Name = "CNombre";
+            // 
+            // CStock
+            // 
+            this.CStock.DataPropertyName = "StockFinal";
+            this.CStock.HeaderText = "Stock";
+            this.CStock.MinimumWidth = 6;
+            this.CStock.Name = "CStock";
+            this.CStock.Width = 125;
+            // 
+            // CPrecioUnitario
+            // 
+            this.CPrecioUnitario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.CPrecioUnitario.DataPropertyName = "PrecioUnitario";
+            this.CPrecioUnitario.HeaderText = "Precio Unitario";
+            this.CPrecioUnitario.MinimumWidth = 6;
+            this.CPrecioUnitario.Name = "CPrecioUnitario";
+            this.CPrecioUnitario.Width = 125;
+            // 
+            // CPrecioMayor
+            // 
+            this.CPrecioMayor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.CPrecioMayor.DataPropertyName = "PrecioPorMayor";
+            this.CPrecioMayor.HeaderText = "Precio x Mayor";
+            this.CPrecioMayor.MinimumWidth = 6;
+            this.CPrecioMayor.Name = "CPrecioMayor";
+            this.CPrecioMayor.Width = 125;
             // 
             // label1
             // 
@@ -130,48 +172,6 @@ namespace Marovi.Formularios
             this.BtnCancelar.UseVisualStyleBackColor = false;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
-            // CIDProducto
-            // 
-            this.CIDProducto.DataPropertyName = "IDProducto";
-            this.CIDProducto.HeaderText = "Código";
-            this.CIDProducto.MinimumWidth = 6;
-            this.CIDProducto.Name = "CIDProducto";
-            this.CIDProducto.Width = 125;
-            // 
-            // CNombre
-            // 
-            this.CNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CNombre.DataPropertyName = "Nombre";
-            this.CNombre.HeaderText = "Descripción";
-            this.CNombre.MinimumWidth = 6;
-            this.CNombre.Name = "CNombre";
-            // 
-            // CStock
-            // 
-            this.CStock.DataPropertyName = "StockFinal";
-            this.CStock.HeaderText = "Stock";
-            this.CStock.MinimumWidth = 6;
-            this.CStock.Name = "CStock";
-            this.CStock.Width = 125;
-            // 
-            // CPrecioUnitario
-            // 
-            this.CPrecioUnitario.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.CPrecioUnitario.DataPropertyName = "PrecioUnitario";
-            this.CPrecioUnitario.HeaderText = "Precio Unitario";
-            this.CPrecioUnitario.MinimumWidth = 6;
-            this.CPrecioUnitario.Name = "CPrecioUnitario";
-            this.CPrecioUnitario.Width = 125;
-            // 
-            // CPrecioMayor
-            // 
-            this.CPrecioMayor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.CPrecioMayor.DataPropertyName = "PrecioPorMayor";
-            this.CPrecioMayor.HeaderText = "Precio x Mayor";
-            this.CPrecioMayor.MinimumWidth = 6;
-            this.CPrecioMayor.Name = "CPrecioMayor";
-            this.CPrecioMayor.Width = 125;
-            // 
             // FrmFacturaDetalleGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -195,8 +195,6 @@ namespace Marovi.Formularios
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView DgvListaProductos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtBuscar;
         private System.Windows.Forms.NumericUpDown NudCantidad;
@@ -208,5 +206,6 @@ namespace Marovi.Formularios
         private System.Windows.Forms.DataGridViewTextBoxColumn CStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPrecioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPrecioMayor;
+        private System.Windows.Forms.DataGridView DgvListaProductos;
     }
 }

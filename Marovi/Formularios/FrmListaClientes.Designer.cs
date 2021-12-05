@@ -144,7 +144,7 @@ namespace Marovi.Formularios
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmListaClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmListaClientes";
+            this.Text = "Listado de Clientes";
             this.Load += new System.EventHandler(this.FrmListaClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvLista)).EndInit();
             this.ResumeLayout(false);

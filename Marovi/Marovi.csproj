@@ -121,6 +121,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\FrmCategoriasGestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FrmCategoriasGestion.Designer.cs">
+      <DependentUpon>FrmCategoriasGestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmClientesGestion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmListaClientes.resx">
       <DependentUpon>FrmListaClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FrmListaFacturas.resx">
+      <DependentUpon>FrmListaFacturas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmListaProductos.resx">
       <DependentUpon>FrmListaProductos.cs</DependentUpon>

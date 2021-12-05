@@ -136,7 +136,7 @@ namespace Marovi.Formularios
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmListaRutas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmListaRutas";
+            this.Text = "Listado de Rutas";
             this.Load += new System.EventHandler(this.FrmListaRutas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvLista)).EndInit();
             this.ResumeLayout(false);

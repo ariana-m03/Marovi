@@ -41,9 +41,8 @@ namespace Marovi.Formularios
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.BtnAgregarProducto = new System.Windows.Forms.ToolStripButton();
-            this.BtnModificarProducto = new System.Windows.Forms.ToolStripButton();
             this.BtnEliminarProducto = new System.Windows.Forms.ToolStripButton();
-            this.DgvLista = new System.Windows.Forms.DataGridView();
+            this.DgvListaF = new System.Windows.Forms.DataGridView();
             this.ColCodProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,7 +57,7 @@ namespace Marovi.Formularios
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvLista)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvListaF)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -137,7 +136,7 @@ namespace Marovi.Formularios
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.toolStrip1);
-            this.groupBox2.Controls.Add(this.DgvLista);
+            this.groupBox2.Controls.Add(this.DgvListaF);
             this.groupBox2.Location = new System.Drawing.Point(12, 207);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(815, 478);
@@ -149,7 +148,6 @@ namespace Marovi.Formularios
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BtnAgregarProducto,
-            this.BtnModificarProducto,
             this.BtnEliminarProducto});
             this.toolStrip1.Location = new System.Drawing.Point(3, 18);
             this.toolStrip1.Name = "toolStrip1";
@@ -168,17 +166,6 @@ namespace Marovi.Formularios
             this.BtnAgregarProducto.Text = "Agregar Producto";
             this.BtnAgregarProducto.Click += new System.EventHandler(this.BtnAgregarProducto_Click);
             // 
-            // BtnModificarProducto
-            // 
-            this.BtnModificarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(107)))), ((int)(((byte)(139)))));
-            this.BtnModificarProducto.ForeColor = System.Drawing.Color.White;
-            this.BtnModificarProducto.Image = ((System.Drawing.Image)(resources.GetObject("BtnModificarProducto.Image")));
-            this.BtnModificarProducto.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BtnModificarProducto.Name = "BtnModificarProducto";
-            this.BtnModificarProducto.Size = new System.Drawing.Size(161, 24);
-            this.BtnModificarProducto.Text = "Modificar Producto";
-            this.BtnModificarProducto.Click += new System.EventHandler(this.BtnModificarProducto_Click);
-            // 
             // BtnEliminarProducto
             // 
             this.BtnEliminarProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(140)))), ((int)(((byte)(158)))));
@@ -190,26 +177,26 @@ namespace Marovi.Formularios
             this.BtnEliminarProducto.Text = "Eliminar Producto";
             this.BtnEliminarProducto.Click += new System.EventHandler(this.BtnEliminarProducto_Click);
             // 
-            // DgvLista
+            // DgvListaF
             // 
-            this.DgvLista.AllowUserToAddRows = false;
-            this.DgvLista.AllowUserToDeleteRows = false;
-            this.DgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DgvListaF.AllowUserToAddRows = false;
+            this.DgvListaF.AllowUserToDeleteRows = false;
+            this.DgvListaF.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvListaF.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColCodProd,
             this.CNombre,
             this.CCantidad,
             this.CPrecioUnitario,
             this.CPrecioMayor});
-            this.DgvLista.Location = new System.Drawing.Point(18, 51);
-            this.DgvLista.Name = "DgvLista";
-            this.DgvLista.RowHeadersVisible = false;
-            this.DgvLista.RowHeadersWidth = 51;
-            this.DgvLista.RowTemplate.Height = 24;
-            this.DgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvLista.Size = new System.Drawing.Size(776, 384);
-            this.DgvLista.TabIndex = 0;
-            this.DgvLista.VirtualMode = true;
+            this.DgvListaF.Location = new System.Drawing.Point(18, 51);
+            this.DgvListaF.Name = "DgvListaF";
+            this.DgvListaF.RowHeadersVisible = false;
+            this.DgvListaF.RowHeadersWidth = 51;
+            this.DgvListaF.RowTemplate.Height = 24;
+            this.DgvListaF.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvListaF.Size = new System.Drawing.Size(776, 384);
+            this.DgvListaF.TabIndex = 0;
+            this.DgvListaF.VirtualMode = true;
             // 
             // ColCodProd
             // 
@@ -345,7 +332,7 @@ namespace Marovi.Formularios
             this.groupBox2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvLista)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvListaF)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,10 +352,8 @@ namespace Marovi.Formularios
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView DgvLista;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton BtnAgregarProducto;
-        private System.Windows.Forms.ToolStripButton BtnModificarProducto;
         private System.Windows.Forms.ToolStripButton BtnEliminarProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCodProd;
         private System.Windows.Forms.DataGridViewTextBoxColumn CNombre;
@@ -378,5 +363,6 @@ namespace Marovi.Formularios
         private System.Windows.Forms.Button BtnLimpiar;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TxtMayor;
+        private System.Windows.Forms.DataGridView DgvListaF;
     }
 }

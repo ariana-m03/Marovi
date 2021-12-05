@@ -68,5 +68,10 @@ namespace Marovi.Formularios
             LlenarListaProductos(CbVerProductosActivos.Checked);
 
         }
+
+        private void DgvLista_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

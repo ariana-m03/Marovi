@@ -11,6 +11,7 @@ namespace Logica
 {
     public class FacturaDetalle
     {
+        public int IdDetalleFact { get; set; }
         public int Cantidad { get; set; }
         public decimal TotalMayor { get; set; }
         public decimal TotalUnitario { get; set; }

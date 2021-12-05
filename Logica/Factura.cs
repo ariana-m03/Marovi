@@ -126,6 +126,22 @@ namespace Logica
         {
             bool R = false;
 
+            try
+            {
+                Conexion MiCnn = new Conexion();
+                MiCnn.ParamList.Add(new SqlParameter("@Id", this.IDFactura));
+
+                int retorno = MiCnn.DMLUpdateDeleteInsert("SPFacturaAnular");
+
+                if (retorno > 0)
+                {
+                    R = true;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
 
             return R;
         }
@@ -182,14 +198,30 @@ namespace Logica
         {
             DataTable R = new DataTable();
             Conexion MiConexion = new Conexion();
-            R = MiConexion.DMLSelect("SPFacturaListarTodos");
+            R = MiConexion.DMLSelect("SPFacturaListarTodas");
             return R;
 
+        }
+
+        public DataTable Listar(bool VerActivos = true, string Filtro = "")
+        {
+            DataTable R = new DataTable();
+            Conexion MyCnn = new Conexion();
+
+            MyCnn.ParamList.Add(new SqlParameter("@VerActivos", VerActivos));
+            MyCnn.ParamList.Add(new SqlParameter("@Filtro", Filtro));
+
+            R = MyCnn.DMLSelect("SPFacturaListar");
+
+            return R;
         }
 
         public DataTable ListarPorFecha(DateTime Fecha)
         {
             DataTable R = new DataTable();
+
+            Conexion MiConexion = new Conexion();
+            R = MiConexion.DMLSelect("SPFacturaListarPorFecha");
 
             return R;
 
@@ -198,6 +230,9 @@ namespace Logica
         public DataTable ListarPorCliente(int IDCliente)
         {
             DataTable R = new DataTable();
+
+            Conexion MiConexion = new Conexion();
+            R = MiConexion.DMLSelect("SPFacturaListarPorCliente");
 
             return R;
 

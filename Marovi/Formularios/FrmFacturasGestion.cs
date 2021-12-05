@@ -51,7 +51,7 @@ namespace Marovi.Formularios
 
             DtListaProductos = MiFacturaLocal.AsignarEsquemaDetalle();
 
-            DgvLista.DataSource = DtListaProductos;
+            DgvListaF.DataSource = DtListaProductos;
 
             TxtUnitario.Text = "0";
             TxtMayor.Text = "0";
@@ -142,7 +142,7 @@ namespace Marovi.Formularios
             if (Resp == DialogResult.OK)
             {
 
-                DgvLista.DataSource = DtListaProductos;
+                DgvListaF.DataSource = DtListaProductos;
 
 
                 TxtUnitario.Text = string.Format("{0:C2}", TotalizarUnitario());
@@ -217,15 +217,10 @@ namespace Marovi.Formularios
             return R;
         }
 
-        private void BtnModificarProducto_Click(object sender, EventArgs e)
-        {
-            //Form MiFrm = new FrmComprasDetalleItemCambioCantidad();
-            //MiFrm.Show();
-        }
 
         private void BtnEliminarProducto_Click(object sender, EventArgs e)
         {
-            int num = Locales.ObjetosGlobales.MiFormGestionFacturas.DgvLista.SelectedRows[0].Index;
+            int num = Locales.ObjetosGlobales.MiFormGestionFacturas.DgvListaF.SelectedRows[0].Index;
 
             Locales.ObjetosGlobales.MiFormGestionFacturas.DtListaProductos.Rows.RemoveAt(num);
 
@@ -235,7 +230,7 @@ namespace Marovi.Formularios
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar();
-            DgvLista.ClearSelection();
+            DgvListaF.ClearSelection();
         }
 
         

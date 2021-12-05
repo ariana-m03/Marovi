@@ -96,18 +96,11 @@ namespace Marovi.Formularios
 
         private void reportesDeFacturasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ReportDocument MiReport = new ReportDocument();
-
-            MiReport = new Reportes.RptFactura();
-
-            FrmVisualizadorReportes MiFormCRV = new FrmVisualizadorReportes();
-
-            MiFormCRV.CrvVisualizadorReportes.ReportSource = MiReport;
-
-            MiFormCRV.Show();
-
-            MiFormCRV.CrvVisualizadorReportes.Zoom(1);
-
+            if (!Locales.ObjetosGlobales.MiFormListaFacturas.Visible)
+            {
+                Locales.ObjetosGlobales.MiFormListaFacturas = new FrmListaFacturas();
+                Locales.ObjetosGlobales.MiFormListaFacturas.Show();
+            }
         }
 
         private void gestiónDeFacturasToolStripMenuItem_Click(object sender, EventArgs e)

@@ -143,7 +143,7 @@ namespace Marovi.Formularios
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmListaProveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmListaProveedores";
+            this.Text = "Listado de Proveedores";
             this.Load += new System.EventHandler(this.FrmListaProveedores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvLista)).EndInit();
             this.ResumeLayout(false);
