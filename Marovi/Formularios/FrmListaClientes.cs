@@ -12,7 +12,7 @@ namespace Marovi.Formularios
 {
     public partial class FrmListaClientes : Form
     {
-        private Logica.Cliente MiClienteLocal { get; set; }
+        
 
         public DataTable ListaClientesNormal { get; set; }
         public DataTable ListaClientesConFiltro { get; set; }
@@ -21,7 +21,7 @@ namespace Marovi.Formularios
         {
             InitializeComponent();
 
-            MiClienteLocal = new Logica.Cliente();
+            
 
         }
 

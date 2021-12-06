@@ -157,5 +157,14 @@ namespace Marovi.Formularios
                 Locales.ObjetosGlobales.MiFormListaRutas.Show();
             }
         }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!Locales.ObjetosGlobales.MiFormGestionCategorias.Visible)
+            {
+                Locales.ObjetosGlobales.MiFormGestionCategorias = new FrmCategoriasGestion();
+                Locales.ObjetosGlobales.MiFormGestionCategorias.Show();
+            }
+        }
     }
 }

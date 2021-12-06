@@ -15,12 +15,14 @@ namespace Logica
         public int IDFactura { get; set; }
         public string NumeroFactura { get; set; }
         public DateTime Fecha { get; set; }
-        
+
         public bool Activo { get; set; }
 
         public Usuario UsuarioRealiza;
         public List<FacturaDetalle> ListaDetalle;
         public Cliente MiCliente;
+      
+
 
 
         public Factura()
@@ -28,6 +30,8 @@ namespace Logica
             UsuarioRealiza = new Usuario();
             ListaDetalle = new List<FacturaDetalle>();
             MiCliente = new Cliente();
+            
+           
         }
 
         public ReportDocument Imprimir(ReportDocument repo)
@@ -146,6 +150,28 @@ namespace Logica
             return R;
         }
 
+        public Factura Consultar(int pIDFactura)
+        {
+            Factura R = new Factura();
+            Conexion MyCnn = new Conexion();
+
+            MyCnn.ParamList.Add(new SqlParameter("@IdFactura", pIDFactura));
+
+            DataTable DatosFactura = new DataTable();
+            DatosFactura = MyCnn.DMLSelect("SPFacturaConsultar");
+
+            if (DatosFactura.Rows.Count > 0)
+            {
+                DataRow MiFila = DatosFactura.Rows[0];
+
+                R.IDFactura = Convert.ToInt32(MiFila["IDFactura"]);
+                R.NumeroFactura = Convert.ToString(MiFila["NumeroFactura"]);
+                R.Fecha = Convert.ToDateTime(MiFila["Fecha"]);
+                R.MiCliente.Nombre = Convert.ToString(MiFila["Nombre"]);
+                R.Activo = Convert.ToBoolean(MiFila["Activo"]);
+            }
+            return R;
+        }
 
         public bool ConsultarPorID()
         {
@@ -171,7 +197,7 @@ namespace Logica
             return R;
         }
 
-        public bool ConsultarPorNumeroFacturaYCliente()
+        public bool ConsultarPorNumeroFacturaYFactura()
         {
             bool R = false;
 
@@ -227,12 +253,12 @@ namespace Logica
 
         }
 
-        public DataTable ListarPorCliente(int IDCliente)
+        public DataTable ListarPorFactura(int IDFactura)
         {
             DataTable R = new DataTable();
 
             Conexion MiConexion = new Conexion();
-            R = MiConexion.DMLSelect("SPFacturaListarPorCliente");
+            R = MiConexion.DMLSelect("SPFacturaListarPorFactura");
 
             return R;
 

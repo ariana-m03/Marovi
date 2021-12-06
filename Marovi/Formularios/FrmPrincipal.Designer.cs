@@ -38,7 +38,6 @@ namespace Marovi.Formularios
             this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rutasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.rolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gestiónDeFacturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,7 +82,6 @@ namespace Marovi.Formularios
             this.proveedoresToolStripMenuItem,
             this.rutasToolStripMenuItem,
             this.toolStripSeparator1,
-            this.rolesToolStripMenuItem,
             this.categoriasToolStripMenuItem});
             this.mantenimientosToolStripMenuItem.Name = "mantenimientosToolStripMenuItem";
             this.mantenimientosToolStripMenuItem.Size = new System.Drawing.Size(146, 25);
@@ -129,17 +127,12 @@ namespace Marovi.Formularios
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(271, 6);
             // 
-            // rolesToolStripMenuItem
-            // 
-            this.rolesToolStripMenuItem.Name = "rolesToolStripMenuItem";
-            this.rolesToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
-            this.rolesToolStripMenuItem.Text = "Roles de Usuario";
-            // 
             // categoriasToolStripMenuItem
             // 
             this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
             this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
             this.categoriasToolStripMenuItem.Text = "Categorías de Productos";
+            this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
             // 
             // procesosToolStripMenuItem
             // 
@@ -291,7 +284,6 @@ namespace Marovi.Formularios
         private System.Windows.Forms.ToolStripMenuItem reportesDeFacturasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem rutasToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem rolesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem listadoDeUsuariosToolStripMenuItem;

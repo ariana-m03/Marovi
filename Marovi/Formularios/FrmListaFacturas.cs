@@ -15,8 +15,6 @@ namespace Marovi.Formularios
     {
         private Logica.Factura MiFacturaLocal { get; set; }
 
-        private DataTable ListaFactura { get; set; }
-
         public DataTable ListaFacturasNormal { get; set; }
         public DataTable ListaFacturasConFiltro { get; set; }
 
@@ -25,7 +23,7 @@ namespace Marovi.Formularios
             InitializeComponent();
 
             MiFacturaLocal = new Logica.Factura();
-            ListaFactura = new DataTable();
+         
 
         }
 
@@ -66,10 +64,6 @@ namespace Marovi.Formularios
             }
         }
 
-
-
-     
-
         private void BtnAnular_Click(object sender, EventArgs e)
         {
             Logica.Factura MiFactura = new Logica.Factura();
@@ -100,7 +94,7 @@ namespace Marovi.Formularios
             {
                 DataGridViewRow MiFila = DgvLista.SelectedRows[0];
                 MiFactura.IDFactura = Convert.ToInt32(MiFila.Cells["CIDFactura"].Value);
-
+           
                 ReportDocument MiReporteFactura = new ReportDocument();
 
                 MiReporteFactura = new Reportes.RptFactura();

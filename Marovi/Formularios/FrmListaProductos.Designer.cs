@@ -30,38 +30,17 @@ namespace Marovi.Formularios
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListaProductos));
-            this.DgvLista = new System.Windows.Forms.DataGridView();
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.CbVerProductosActivos = new System.Windows.Forms.CheckBox();
-            this.CIDFactura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CNumFact = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CIDCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgvLista = new System.Windows.Forms.DataGridView();
+            this.ColIDProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPrecioPorMayor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLista)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DgvLista
-            // 
-            this.DgvLista.AllowUserToAddRows = false;
-            this.DgvLista.AllowUserToDeleteRows = false;
-            this.DgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CIDFactura,
-            this.CNumFact,
-            this.CFecha,
-            this.CIDCliente});
-            this.DgvLista.Location = new System.Drawing.Point(12, 84);
-            this.DgvLista.Name = "DgvLista";
-            this.DgvLista.ReadOnly = true;
-            this.DgvLista.RowHeadersVisible = false;
-            this.DgvLista.RowHeadersWidth = 51;
-            this.DgvLista.RowTemplate.Height = 24;
-            this.DgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvLista.Size = new System.Drawing.Size(1310, 298);
-            this.DgvLista.TabIndex = 4;
-            this.DgvLista.VirtualMode = true;
-            this.DgvLista.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLista_CellClick);
             // 
             // TxtBuscar
             // 
@@ -93,53 +72,84 @@ namespace Marovi.Formularios
             this.CbVerProductosActivos.UseVisualStyleBackColor = true;
             this.CbVerProductosActivos.CheckedChanged += new System.EventHandler(this.CbVerProductosActivos_CheckedChanged);
             // 
-            // CIDFactura
+            // DgvLista
             // 
-            this.CIDFactura.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.CIDFactura.DataPropertyName = "IDFactura";
-            this.CIDFactura.HeaderText = "Código";
-            this.CIDFactura.MinimumWidth = 6;
-            this.CIDFactura.Name = "CIDFactura";
-            this.CIDFactura.ReadOnly = true;
-            this.CIDFactura.Width = 125;
+            this.DgvLista.AllowUserToAddRows = false;
+            this.DgvLista.AllowUserToDeleteRows = false;
+            this.DgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColIDProducto,
+            this.ColDescripcion,
+            this.ColStock,
+            this.ColPrecioUnitario,
+            this.ColPrecioPorMayor});
+            this.DgvLista.Location = new System.Drawing.Point(12, 90);
+            this.DgvLista.Name = "DgvLista";
+            this.DgvLista.ReadOnly = true;
+            this.DgvLista.RowHeadersVisible = false;
+            this.DgvLista.RowHeadersWidth = 51;
+            this.DgvLista.RowTemplate.Height = 24;
+            this.DgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvLista.Size = new System.Drawing.Size(1415, 296);
+            this.DgvLista.TabIndex = 8;
+            this.DgvLista.VirtualMode = true;
             // 
-            // CNumFact
+            // ColIDProducto
             // 
-            this.CNumFact.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CNumFact.DataPropertyName = "NumeroFactura";
-            this.CNumFact.HeaderText = "Número Factura";
-            this.CNumFact.MinimumWidth = 6;
-            this.CNumFact.Name = "CNumFact";
-            this.CNumFact.ReadOnly = true;
+            this.ColIDProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColIDProducto.DataPropertyName = "IDProducto";
+            this.ColIDProducto.HeaderText = "Código";
+            this.ColIDProducto.MinimumWidth = 6;
+            this.ColIDProducto.Name = "ColIDProducto";
+            this.ColIDProducto.ReadOnly = true;
+            this.ColIDProducto.Width = 125;
             // 
-            // CFecha
+            // ColDescripcion
             // 
-            this.CFecha.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.CFecha.DataPropertyName = "Fecha";
-            this.CFecha.HeaderText = "Fecha";
-            this.CFecha.MinimumWidth = 6;
-            this.CFecha.Name = "CFecha";
-            this.CFecha.ReadOnly = true;
-            this.CFecha.Width = 125;
+            this.ColDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColDescripcion.DataPropertyName = "Descripcion";
+            this.ColDescripcion.HeaderText = "Descripción";
+            this.ColDescripcion.MinimumWidth = 6;
+            this.ColDescripcion.Name = "ColDescripcion";
+            this.ColDescripcion.ReadOnly = true;
             // 
-            // CIDCliente
+            // ColStock
             // 
-            this.CIDCliente.DataPropertyName = "IDCliente";
-            this.CIDCliente.HeaderText = "Cliente";
-            this.CIDCliente.MinimumWidth = 6;
-            this.CIDCliente.Name = "CIDCliente";
-            this.CIDCliente.ReadOnly = true;
-            this.CIDCliente.Width = 200;
+            this.ColStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColStock.DataPropertyName = "StockFinal";
+            this.ColStock.HeaderText = "Stock";
+            this.ColStock.MinimumWidth = 6;
+            this.ColStock.Name = "ColStock";
+            this.ColStock.ReadOnly = true;
+            this.ColStock.Width = 125;
+            // 
+            // ColPrecioUnitario
+            // 
+            this.ColPrecioUnitario.DataPropertyName = "PrecioUnitario";
+            this.ColPrecioUnitario.HeaderText = "Precio Unitario";
+            this.ColPrecioUnitario.MinimumWidth = 6;
+            this.ColPrecioUnitario.Name = "ColPrecioUnitario";
+            this.ColPrecioUnitario.ReadOnly = true;
+            this.ColPrecioUnitario.Width = 200;
+            // 
+            // ColPrecioPorMayor
+            // 
+            this.ColPrecioPorMayor.DataPropertyName = "PrecioPorMayor";
+            this.ColPrecioPorMayor.HeaderText = "Precio x Mayor";
+            this.ColPrecioPorMayor.MinimumWidth = 6;
+            this.ColPrecioPorMayor.Name = "ColPrecioPorMayor";
+            this.ColPrecioPorMayor.ReadOnly = true;
+            this.ColPrecioPorMayor.Width = 200;
             // 
             // FrmListaProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1331, 509);
+            this.ClientSize = new System.Drawing.Size(1435, 509);
+            this.Controls.Add(this.DgvLista);
             this.Controls.Add(this.CbVerProductosActivos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtBuscar);
-            this.Controls.Add(this.DgvLista);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmListaProductos";
@@ -153,14 +163,14 @@ namespace Marovi.Formularios
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView DgvLista;
         private System.Windows.Forms.TextBox TxtBuscar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox CbVerProductosActivos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CIDFactura;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CNumFact;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CFecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CIDCliente;
+        private System.Windows.Forms.DataGridView DgvLista;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColIDProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColStock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrecioUnitario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrecioPorMayor;
     }
 }

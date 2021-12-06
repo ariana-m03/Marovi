@@ -39,6 +39,8 @@ namespace Marovi.Locales
 
         public static Reportes.RptFactura MiReporteFactura = new Reportes.RptFactura();
 
+        public static Formularios.FrmCategoriasGestion MiFormGestionCategorias = new Formularios.FrmCategoriasGestion();
+
         //public static Formularios.FrmVisualizadorReportes MiVisualizador = new Formularios.FrmVisualizadorReportes();
 
 

@@ -63,6 +63,7 @@ namespace Marovi.Formularios
             this.DgvLista.Size = new System.Drawing.Size(1310, 298);
             this.DgvLista.TabIndex = 5;
             this.DgvLista.VirtualMode = true;
+            
             // 
             // CIDFactura
             // 

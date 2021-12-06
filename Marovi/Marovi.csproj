@@ -233,6 +233,9 @@
       <DependentUpon>RptFactura.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Formularios\FrmCategoriasGestion.resx">
+      <DependentUpon>FrmCategoriasGestion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmClientesGestion.resx">
       <DependentUpon>FrmClientesGestion.cs</DependentUpon>
     </EmbeddedResource>
