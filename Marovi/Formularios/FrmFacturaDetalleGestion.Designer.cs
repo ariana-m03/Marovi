@@ -29,6 +29,7 @@ namespace Marovi.Formularios
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmFacturaDetalleGestion));
             this.DgvListaProductos = new System.Windows.Forms.DataGridView();
             this.CIDProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -184,8 +185,9 @@ namespace Marovi.Formularios
             this.Controls.Add(this.TxtBuscar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.DgvListaProductos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmFacturaDetalleGestion";
-            this.Text = "FrmFacturaDetalleGestion";
+            this.Text = "Gestión Detalle Factura";
             this.Load += new System.EventHandler(this.FrmFacturaDetalleGestion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvListaProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NudCantidad)).EndInit();

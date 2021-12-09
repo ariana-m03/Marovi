@@ -121,6 +121,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\AcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\AcercaDe.Designer.cs">
+      <DependentUpon>AcercaDe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmCategoriasGestion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +239,9 @@
       <DependentUpon>RptFactura.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Formularios\AcercaDe.resx">
+      <DependentUpon>AcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCategoriasGestion.resx">
       <DependentUpon>FrmCategoriasGestion.cs</DependentUpon>
     </EmbeddedResource>
@@ -318,7 +327,9 @@
       <Name>Logica</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\redes.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Marovi-PhotoRoom %281%29.png" />
   </ItemGroup>

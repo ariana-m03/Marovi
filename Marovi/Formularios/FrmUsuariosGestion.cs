@@ -354,9 +354,6 @@ namespace Marovi.Formularios
             }
         }
 
-        private void DgvLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
     }
 }

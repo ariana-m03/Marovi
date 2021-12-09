@@ -73,7 +73,6 @@ namespace Marovi.Formularios
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(362, 32);
             this.TxtUsuario.TabIndex = 3;
-            this.TxtUsuario.TextChanged += new System.EventHandler(this.TxtUsuario_TextChanged);
             // 
             // TxtPass
             // 
@@ -83,6 +82,7 @@ namespace Marovi.Formularios
             this.TxtPass.Size = new System.Drawing.Size(306, 32);
             this.TxtPass.TabIndex = 4;
             this.TxtPass.UseSystemPasswordChar = true;
+            this.TxtPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPass_KeyDown);
             // 
             // BtnIngresar
             // 
@@ -178,8 +178,6 @@ namespace Marovi.Formularios
             this.Name = "FrmLogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmLogIn";
-            this.Load += new System.EventHandler(this.FrmLogIn_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmLogIn_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

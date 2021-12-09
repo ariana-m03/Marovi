@@ -67,7 +67,7 @@ namespace Marovi.Formularios
         {
             Logica.ProductoCategoria ObjCategoria = new Logica.ProductoCategoria();
             DataTable Datos = new DataTable();
-            Datos = ObjCategoria.Listar();
+            Datos = ObjCategoria.ListarCombo();
 
             CboxCategoria.ValueMember = "ID";
             CboxCategoria.DisplayMember = "Descripcion";

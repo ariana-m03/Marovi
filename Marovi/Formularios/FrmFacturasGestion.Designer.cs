@@ -43,17 +43,17 @@ namespace Marovi.Formularios
             this.BtnAgregarProducto = new System.Windows.Forms.ToolStripButton();
             this.BtnEliminarProducto = new System.Windows.Forms.ToolStripButton();
             this.DgvListaF = new System.Windows.Forms.DataGridView();
-            this.ColCodProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CPrecioMayor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.TxtUnitario = new System.Windows.Forms.TextBox();
             this.BtnCrearFactura = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtMayor = new System.Windows.Forms.TextBox();
+            this.ColCodProd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CPrecioMayor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -198,46 +198,6 @@ namespace Marovi.Formularios
             this.DgvListaF.TabIndex = 0;
             this.DgvListaF.VirtualMode = true;
             // 
-            // ColCodProd
-            // 
-            this.ColCodProd.DataPropertyName = "IDProducto";
-            this.ColCodProd.HeaderText = "Cód. Producto";
-            this.ColCodProd.MinimumWidth = 6;
-            this.ColCodProd.Name = "ColCodProd";
-            this.ColCodProd.Width = 125;
-            // 
-            // CNombre
-            // 
-            this.CNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.CNombre.DataPropertyName = "Nombre";
-            this.CNombre.HeaderText = "Producto";
-            this.CNombre.MinimumWidth = 6;
-            this.CNombre.Name = "CNombre";
-            // 
-            // CCantidad
-            // 
-            this.CCantidad.DataPropertyName = "Cantidad";
-            this.CCantidad.HeaderText = "Cantidad";
-            this.CCantidad.MinimumWidth = 6;
-            this.CCantidad.Name = "CCantidad";
-            this.CCantidad.Width = 125;
-            // 
-            // CPrecioUnitario
-            // 
-            this.CPrecioUnitario.DataPropertyName = "PrecioUnitario";
-            this.CPrecioUnitario.HeaderText = "Precio Unitario";
-            this.CPrecioUnitario.MinimumWidth = 6;
-            this.CPrecioUnitario.Name = "CPrecioUnitario";
-            this.CPrecioUnitario.Width = 125;
-            // 
-            // CPrecioMayor
-            // 
-            this.CPrecioMayor.DataPropertyName = "PrecioPorMayor";
-            this.CPrecioMayor.HeaderText = "Precio Por Mayor";
-            this.CPrecioMayor.MinimumWidth = 6;
-            this.CPrecioMayor.Name = "CPrecioMayor";
-            this.CPrecioMayor.Width = 125;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -308,6 +268,46 @@ namespace Marovi.Formularios
             this.TxtMayor.Text = "0";
             this.TxtMayor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // ColCodProd
+            // 
+            this.ColCodProd.DataPropertyName = "IDProducto";
+            this.ColCodProd.HeaderText = "Cód. Producto";
+            this.ColCodProd.MinimumWidth = 6;
+            this.ColCodProd.Name = "ColCodProd";
+            this.ColCodProd.Width = 125;
+            // 
+            // CNombre
+            // 
+            this.CNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.CNombre.DataPropertyName = "Nombre";
+            this.CNombre.HeaderText = "Producto";
+            this.CNombre.MinimumWidth = 6;
+            this.CNombre.Name = "CNombre";
+            // 
+            // CCantidad
+            // 
+            this.CCantidad.DataPropertyName = "Cantidad";
+            this.CCantidad.HeaderText = "Cantidad";
+            this.CCantidad.MinimumWidth = 6;
+            this.CCantidad.Name = "CCantidad";
+            this.CCantidad.Width = 125;
+            // 
+            // CPrecioUnitario
+            // 
+            this.CPrecioUnitario.DataPropertyName = "TotalUnitario";
+            this.CPrecioUnitario.HeaderText = "Precio Unitario";
+            this.CPrecioUnitario.MinimumWidth = 6;
+            this.CPrecioUnitario.Name = "CPrecioUnitario";
+            this.CPrecioUnitario.Width = 125;
+            // 
+            // CPrecioMayor
+            // 
+            this.CPrecioMayor.DataPropertyName = "TotalMayor";
+            this.CPrecioMayor.HeaderText = "Precio Por Mayor";
+            this.CPrecioMayor.MinimumWidth = 6;
+            this.CPrecioMayor.Name = "CPrecioMayor";
+            this.CPrecioMayor.Width = 125;
+            // 
             // FrmFacturasGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -355,14 +355,14 @@ namespace Marovi.Formularios
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton BtnAgregarProducto;
         private System.Windows.Forms.ToolStripButton BtnEliminarProducto;
+        private System.Windows.Forms.Button BtnLimpiar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox TxtMayor;
+        private System.Windows.Forms.DataGridView DgvListaF;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCodProd;
         private System.Windows.Forms.DataGridViewTextBoxColumn CNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn CCantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPrecioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn CPrecioMayor;
-        private System.Windows.Forms.Button BtnLimpiar;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TxtMayor;
-        private System.Windows.Forms.DataGridView DgvListaF;
     }
 }

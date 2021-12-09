@@ -20,13 +20,7 @@ namespace Logica
             Activo = true;
         }
 
-        public DataTable Listar()
-        {
-            DataTable R = new DataTable();
-            Conexion MyCnn = new Conexion();
-            R = MyCnn.DMLSelect("SPProductoCategoriaListar");
-            return R;
-        }
+
 
         public bool Agregar()
         {
@@ -199,6 +193,15 @@ namespace Logica
             DataTable R = new DataTable();
             Conexion MiConexion = new Conexion();
             R = MiConexion.DMLSelect("SPProductoCategoriaListarTodas");
+            return R;
+
+        }
+
+        public DataTable ListarCombo()
+        {
+            DataTable R = new DataTable();
+            Conexion MiConexion = new Conexion();
+            R = MiConexion.DMLSelect("SPCategoriaListarCombo");
             return R;
 
         }

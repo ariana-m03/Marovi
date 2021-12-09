@@ -13,9 +13,9 @@ namespace Marovi.Formularios
     public partial class FrmFacturaDetalleGestion : Form
     {
 
-        public DataTable ListaProductos { get; set; }
-        public DataTable ListaProductosConFiltro { get; set; }
-        public Logica.Producto MiProducto { get; set; }
+        private DataTable ListaProductos { get; set; }
+        private DataTable ListaProductosConFiltro { get; set; }
+        private Logica.Producto MiProducto { get; set; }
 
         public FrmFacturaDetalleGestion()
         {

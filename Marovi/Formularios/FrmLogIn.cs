@@ -68,19 +68,12 @@ namespace Marovi.Formularios
             TxtPass.UseSystemPasswordChar = true;
         }
 
-        private void FrmLogIn_KeyDown(object sender, KeyEventArgs e)
+        private void TxtPass_KeyDown(object sender, KeyEventArgs e)
         {
-
-        }
-
-        private void FrmLogIn_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtUsuario_TextChanged(object sender, EventArgs e)
-        {
-
+            if (e.KeyCode == Keys.Enter)
+            {
+                BtnIngresar_Click(sender, e);
+            }
         }
     }
 }

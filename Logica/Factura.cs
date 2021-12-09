@@ -197,7 +197,7 @@ namespace Logica
             return R;
         }
 
-        public bool ConsultarPorNumeroFacturaYFactura()
+        public bool ConsultarPorNumeroFacturaYCliente(int IDFactura, int IDCliente)
         {
             bool R = false;
 
@@ -245,20 +245,25 @@ namespace Logica
         public DataTable ListarPorFecha(DateTime Fecha)
         {
             DataTable R = new DataTable();
-
             Conexion MiConexion = new Conexion();
+
+            MiConexion.ParamList.Add(new SqlParameter("@Fecha", Fecha));
+
             R = MiConexion.DMLSelect("SPFacturaListarPorFecha");
 
             return R;
 
         }
 
-        public DataTable ListarPorFactura(int IDFactura)
+        public DataTable ListarPorCliente(int IDCliente, DateTime Fecha)
         {
             DataTable R = new DataTable();
-
             Conexion MiConexion = new Conexion();
-            R = MiConexion.DMLSelect("SPFacturaListarPorFactura");
+
+            MiConexion.ParamList.Add(new SqlParameter("@IDCliente", IDCliente));
+            MiConexion.ParamList.Add(new SqlParameter("@Fecha", Fecha));
+
+            R = MiConexion.DMLSelect("SPFacturaListarPorCliente");
 
             return R;
 

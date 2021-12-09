@@ -44,18 +44,34 @@ namespace Marovi.Formularios
             Application.Exit();
         }
 
+        
+
+        
+
+        private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!Locales.ObjetosGlobales.MiFormGestionUsuarios.Visible)
             {
+                
                 Locales.ObjetosGlobales.MiFormGestionUsuarios = new FrmUsuariosGestion();
                 Locales.ObjetosGlobales.MiFormGestionUsuarios.Show();
+               
             }
         }
 
         private void productosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!Locales.ObjetosGlobales.MiFormGestionProductos.Visible)
+            {
+                Locales.ObjetosGlobales.MiFormGestionProductos = new FrmProductosGestion();
+                Locales.ObjetosGlobales.MiFormGestionProductos.Show();
+            }
+            else
             {
                 Locales.ObjetosGlobales.MiFormGestionProductos = new FrmProductosGestion();
                 Locales.ObjetosGlobales.MiFormGestionProductos.Show();
@@ -89,9 +105,13 @@ namespace Marovi.Formularios
             }
         }
 
-        private void procesosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void gestiónDeFacturasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (!Locales.ObjetosGlobales.MiFormGestionFacturas.Visible)
+            {
+                Locales.ObjetosGlobales.MiFormGestionFacturas = new FrmFacturasGestion();
+                Locales.ObjetosGlobales.MiFormGestionFacturas.Show();
+            }
         }
 
         private void reportesDeFacturasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -103,17 +123,7 @@ namespace Marovi.Formularios
             }
         }
 
-        private void gestiónDeFacturasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (!Locales.ObjetosGlobales.MiFormGestionFacturas.Visible)
-            {
-                Locales.ObjetosGlobales.MiFormGestionFacturas = new FrmFacturasGestion();
-                Locales.ObjetosGlobales.MiFormGestionFacturas.Show();
-            }
-        }
-
-
-        private void listadoDeUsuariosToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void listadoDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (!Locales.ObjetosGlobales.MiFormListaUsuarios.Visible)
             {
@@ -165,6 +175,12 @@ namespace Marovi.Formularios
                 Locales.ObjetosGlobales.MiFormGestionCategorias = new FrmCategoriasGestion();
                 Locales.ObjetosGlobales.MiFormGestionCategorias.Show();
             }
+        }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form MiFrm = new AcercaDe();
+            MiFrm.Show();
         }
     }
 }
