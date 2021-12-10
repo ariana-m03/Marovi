@@ -17,7 +17,7 @@ namespace Marovi.Formularios
             InitializeComponent();
         }
 
-      
+
 
         private void BtnCancelar_Click(object sender, EventArgs e)
         {
@@ -35,6 +35,7 @@ namespace Marovi.Formularios
                 Logica.Usuario MiUsuario = new Logica.Usuario();
 
                 int IdUsuarioValidado = MiUsuario.ValidarLogIn(u, p);
+                
 
                 if (IdUsuarioValidado > 0)
                 {
@@ -52,6 +53,9 @@ namespace Marovi.Formularios
 
             }
         }
+
+        
+ 
 
         private void BtnVer_Click(object sender, EventArgs e)
         {

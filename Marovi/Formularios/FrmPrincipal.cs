@@ -35,6 +35,7 @@ namespace Marovi.Formularios
                     mantenimientosToolStripMenuItem.Visible = false;
                     reportesToolStripMenuItem.Visible = false;
 
+
                     break;
             }
         }
