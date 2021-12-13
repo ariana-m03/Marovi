@@ -204,6 +204,9 @@ namespace Logica
             try
             {
                 Conexion MyCnn = new Conexion();
+
+                
+
                 MyCnn.ParamList.Add(new SqlParameter("@NumeroF", this.NumeroFactura));
                 MyCnn.ParamList.Add(new SqlParameter("@Cliente", this.MiCliente));
                 DataTable retorno = MyCnn.DMLSelect("SPFacturaConsultarPorNumeroFyCliente");

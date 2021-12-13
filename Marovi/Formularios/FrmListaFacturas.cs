@@ -55,7 +55,7 @@ namespace Marovi.Formularios
         {
             if (!string.IsNullOrEmpty(TxtBuscar.Text.Trim()) && TxtBuscar.Text.Count() >= 2)
             {
-                LlenarListaFacturas(CbVerFacturasActivas.Checked);
+                LlenarListaFacturas(CbVerFacturasActivas.Checked, TxtBuscar.Text.Trim());
 
             }
             else
@@ -99,7 +99,7 @@ namespace Marovi.Formularios
 
                 MiReporteFactura = new Reportes.RptFactura();
 
-                MiReporteFactura = MiFacturaLocal.Imprimir(MiReporteFactura);
+                MiReporteFactura = MiFactura.Imprimir(MiReporteFactura);
 
                 FrmVisualizadorReportes MiFormCRV = new FrmVisualizadorReportes();
 

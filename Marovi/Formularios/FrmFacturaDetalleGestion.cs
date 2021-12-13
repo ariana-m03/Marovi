@@ -12,7 +12,9 @@ namespace Marovi.Formularios
 {
     public partial class FrmFacturaDetalleGestion : Form
     {
-
+        //private Logica.Producto MiProductoLocal { get; set; }
+        //private bool FlagActivar { get; set; }
+        public DataTable ListaProductosNormal { get; set; }
         private DataTable ListaProductos { get; set; }
         private DataTable ListaProductosConFiltro { get; set; }
         private Logica.Producto MiProducto { get; set; }
@@ -29,6 +31,7 @@ namespace Marovi.Formularios
 
         private void FrmFacturaDetalleGestion_Load(object sender, EventArgs e)
         {
+            
             LlenarLista();
         }
 
@@ -91,9 +94,26 @@ namespace Marovi.Formularios
             this.DialogResult = DialogResult.Cancel;
         }
 
+        private void LlenarListaProductos(bool VerActivos, string FiltroBusqueda = "")
+        {
+            Logica.Producto MiProducto = new Logica.Producto();
+
+            if (!string.IsNullOrEmpty(FiltroBusqueda.Trim()))
+            {
+                ListaProductosConFiltro = MiProducto.Listar(VerActivos, FiltroBusqueda);
+                DgvListaProductos.DataSource = ListaProductosConFiltro;
+            }
+            else
+            {
+                ListaProductosNormal = MiProducto.Listar(VerActivos);
+                DgvListaProductos.DataSource = ListaProductosNormal;
+            }
+            DgvListaProductos.ClearSelection();
+        }
+
         private void TxtBuscar_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

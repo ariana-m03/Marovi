@@ -35,7 +35,7 @@ namespace Marovi.Formularios
             this.CbVerProductosActivos = new System.Windows.Forms.CheckBox();
             this.DgvLista = new System.Windows.Forms.DataGridView();
             this.ColIDProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPrecioPorMayor = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,7 +64,7 @@ namespace Marovi.Formularios
             this.CbVerProductosActivos.AutoSize = true;
             this.CbVerProductosActivos.Checked = true;
             this.CbVerProductosActivos.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.CbVerProductosActivos.Location = new System.Drawing.Point(1153, 43);
+            this.CbVerProductosActivos.Location = new System.Drawing.Point(1131, 42);
             this.CbVerProductosActivos.Name = "CbVerProductosActivos";
             this.CbVerProductosActivos.Size = new System.Drawing.Size(169, 21);
             this.CbVerProductosActivos.TabIndex = 7;
@@ -79,7 +79,7 @@ namespace Marovi.Formularios
             this.DgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColIDProducto,
-            this.ColDescripcion,
+            this.ColNombre,
             this.ColStock,
             this.ColPrecioUnitario,
             this.ColPrecioPorMayor});
@@ -90,7 +90,7 @@ namespace Marovi.Formularios
             this.DgvLista.RowHeadersWidth = 51;
             this.DgvLista.RowTemplate.Height = 24;
             this.DgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvLista.Size = new System.Drawing.Size(1415, 296);
+            this.DgvLista.Size = new System.Drawing.Size(1288, 296);
             this.DgvLista.TabIndex = 8;
             this.DgvLista.VirtualMode = true;
             // 
@@ -104,14 +104,14 @@ namespace Marovi.Formularios
             this.ColIDProducto.ReadOnly = true;
             this.ColIDProducto.Width = 125;
             // 
-            // ColDescripcion
+            // ColNombre
             // 
-            this.ColDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColDescripcion.DataPropertyName = "Descripcion";
-            this.ColDescripcion.HeaderText = "Descripción";
-            this.ColDescripcion.MinimumWidth = 6;
-            this.ColDescripcion.Name = "ColDescripcion";
-            this.ColDescripcion.ReadOnly = true;
+            this.ColNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColNombre.DataPropertyName = "Nombre";
+            this.ColNombre.HeaderText = "Descripción";
+            this.ColNombre.MinimumWidth = 6;
+            this.ColNombre.Name = "ColNombre";
+            this.ColNombre.ReadOnly = true;
             // 
             // ColStock
             // 
@@ -145,7 +145,7 @@ namespace Marovi.Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1435, 509);
+            this.ClientSize = new System.Drawing.Size(1309, 509);
             this.Controls.Add(this.DgvLista);
             this.Controls.Add(this.CbVerProductosActivos);
             this.Controls.Add(this.label1);
@@ -168,7 +168,7 @@ namespace Marovi.Formularios
         private System.Windows.Forms.CheckBox CbVerProductosActivos;
         private System.Windows.Forms.DataGridView DgvLista;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColIDProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDescripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColStock;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPrecioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPrecioPorMayor;

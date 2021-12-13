@@ -54,12 +54,19 @@ namespace Marovi.Formularios
         {
             bool R = false;
 
-            if (!string.IsNullOrEmpty(TxtCategoria.Text.Trim())
+            if (!string.IsNullOrEmpty(TxtCat.Text.Trim())
                 )
             {
                 if (BtnEditar.Enabled)
                 {
                     R = true;
+                }
+                else
+                {
+                    if (!string.IsNullOrEmpty(TxtCat.Text.Trim()))
+                    {
+                        R = true;
+                    }
                 }
             }
             return R;
@@ -113,13 +120,13 @@ namespace Marovi.Formularios
         {
             if (ValidarDatosRequeridos())
             {
-                DialogResult RespuestaCategoria = MessageBox.Show("¿Está seguro de agregar este Categoria?", "Confirmación requerida", MessageBoxButtons.YesNo);
+                DialogResult RespuestaCategoria = MessageBox.Show("¿Está seguro de agregar esta Categoria?", "Confirmación requerida", MessageBoxButtons.YesNo);
 
                 if (RespuestaCategoria == DialogResult.Yes)
                 {
                     Logica.ProductoCategoria MiCategoria = new Logica.ProductoCategoria();
 
-                    MiCategoria.Categoria = TxtCategoria.Text.Trim();
+                    MiCategoria.Categoria = TxtCat.Text.Trim();
 
                     bool CategoriaExiste = MiCategoria.ConsultarPorCategoria();
 

@@ -34,11 +34,6 @@ namespace Marovi.Formularios
             this.TxtBuscar = new System.Windows.Forms.TextBox();
             this.CbVerProductosActivos = new System.Windows.Forms.CheckBox();
             this.DgvLista = new System.Windows.Forms.DataGridView();
-            this.ColIDProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColPrecioPorMayor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.DtpCaducidad = new System.Windows.Forms.DateTimePicker();
             this.DtpIngreso = new System.Windows.Forms.DateTimePicker();
@@ -74,6 +69,11 @@ namespace Marovi.Formularios
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
+            this.ColIDProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColStock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPrecioPorMayor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLista)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -115,7 +115,7 @@ namespace Marovi.Formularios
             this.DgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColIDProducto,
-            this.ColDescripcion,
+            this.ColNombre,
             this.ColStock,
             this.ColPrecioUnitario,
             this.ColPrecioPorMayor});
@@ -130,53 +130,6 @@ namespace Marovi.Formularios
             this.DgvLista.TabIndex = 3;
             this.DgvLista.VirtualMode = true;
             this.DgvLista.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvLista_CellClick);
-            // 
-            // ColIDProducto
-            // 
-            this.ColIDProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColIDProducto.DataPropertyName = "IDProducto";
-            this.ColIDProducto.HeaderText = "Código";
-            this.ColIDProducto.MinimumWidth = 6;
-            this.ColIDProducto.Name = "ColIDProducto";
-            this.ColIDProducto.ReadOnly = true;
-            this.ColIDProducto.Width = 125;
-            // 
-            // ColDescripcion
-            // 
-            this.ColDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ColDescripcion.DataPropertyName = "Descripcion";
-            this.ColDescripcion.HeaderText = "Descripción";
-            this.ColDescripcion.MinimumWidth = 6;
-            this.ColDescripcion.Name = "ColDescripcion";
-            this.ColDescripcion.ReadOnly = true;
-            // 
-            // ColStock
-            // 
-            this.ColStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColStock.DataPropertyName = "StockFinal";
-            this.ColStock.HeaderText = "Stock";
-            this.ColStock.MinimumWidth = 6;
-            this.ColStock.Name = "ColStock";
-            this.ColStock.ReadOnly = true;
-            this.ColStock.Width = 125;
-            // 
-            // ColPrecioUnitario
-            // 
-            this.ColPrecioUnitario.DataPropertyName = "PrecioUnitario";
-            this.ColPrecioUnitario.HeaderText = "Precio Unitario";
-            this.ColPrecioUnitario.MinimumWidth = 6;
-            this.ColPrecioUnitario.Name = "ColPrecioUnitario";
-            this.ColPrecioUnitario.ReadOnly = true;
-            this.ColPrecioUnitario.Width = 200;
-            // 
-            // ColPrecioPorMayor
-            // 
-            this.ColPrecioPorMayor.DataPropertyName = "PrecioPorMayor";
-            this.ColPrecioPorMayor.HeaderText = "Precio x Mayor";
-            this.ColPrecioPorMayor.MinimumWidth = 6;
-            this.ColPrecioPorMayor.Name = "ColPrecioPorMayor";
-            this.ColPrecioPorMayor.ReadOnly = true;
-            this.ColPrecioPorMayor.Width = 200;
             // 
             // groupBox1
             // 
@@ -523,6 +476,53 @@ namespace Marovi.Formularios
             this.BtnCancelar.UseVisualStyleBackColor = false;
             this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
+            // ColIDProducto
+            // 
+            this.ColIDProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColIDProducto.DataPropertyName = "IDProducto";
+            this.ColIDProducto.HeaderText = "Código";
+            this.ColIDProducto.MinimumWidth = 6;
+            this.ColIDProducto.Name = "ColIDProducto";
+            this.ColIDProducto.ReadOnly = true;
+            this.ColIDProducto.Width = 125;
+            // 
+            // ColNombre
+            // 
+            this.ColNombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColNombre.DataPropertyName = "Nombre";
+            this.ColNombre.HeaderText = "Descripción";
+            this.ColNombre.MinimumWidth = 6;
+            this.ColNombre.Name = "ColNombre";
+            this.ColNombre.ReadOnly = true;
+            // 
+            // ColStock
+            // 
+            this.ColStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColStock.DataPropertyName = "StockFinal";
+            this.ColStock.HeaderText = "Stock";
+            this.ColStock.MinimumWidth = 6;
+            this.ColStock.Name = "ColStock";
+            this.ColStock.ReadOnly = true;
+            this.ColStock.Width = 125;
+            // 
+            // ColPrecioUnitario
+            // 
+            this.ColPrecioUnitario.DataPropertyName = "PrecioUnitario";
+            this.ColPrecioUnitario.HeaderText = "Precio Unitario";
+            this.ColPrecioUnitario.MinimumWidth = 6;
+            this.ColPrecioUnitario.Name = "ColPrecioUnitario";
+            this.ColPrecioUnitario.ReadOnly = true;
+            this.ColPrecioUnitario.Width = 200;
+            // 
+            // ColPrecioPorMayor
+            // 
+            this.ColPrecioPorMayor.DataPropertyName = "PrecioPorMayor";
+            this.ColPrecioPorMayor.HeaderText = "Precio x Mayor";
+            this.ColPrecioPorMayor.MinimumWidth = 6;
+            this.ColPrecioPorMayor.Name = "ColPrecioPorMayor";
+            this.ColPrecioPorMayor.ReadOnly = true;
+            this.ColPrecioPorMayor.Width = 200;
+            // 
             // FrmProductosGestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -578,11 +578,6 @@ namespace Marovi.Formularios
         private System.Windows.Forms.TextBox TxtDescripcion;
         private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.TextBox TxtCod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColIDProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColDescripcion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColStock;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrecioUnitario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrecioPorMayor;
         private System.Windows.Forms.ComboBox CboxCategoria;
         private System.Windows.Forms.TextBox TxtXMayor;
         private System.Windows.Forms.TextBox TxtUnitario;
@@ -598,5 +593,10 @@ namespace Marovi.Formularios
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.DateTimePicker DtpCaducidad;
         private System.Windows.Forms.DateTimePicker DtpIngreso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColIDProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColStock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrecioUnitario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColPrecioPorMayor;
     }
 }
