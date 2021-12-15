@@ -225,6 +225,8 @@ namespace Marovi.Formularios
             Locales.ObjetosGlobales.MiFormGestionFacturas.DtListaProductos.Rows.RemoveAt(num);
 
             MessageBox.Show("Producto eliminado correctamente", ":)", MessageBoxButtons.OK);
+            
+
         }
 
         private void BtnLimpiar_Click(object sender, EventArgs e)

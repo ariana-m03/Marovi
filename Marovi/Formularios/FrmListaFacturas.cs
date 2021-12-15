@@ -14,7 +14,7 @@ namespace Marovi.Formularios
     public partial class FrmListaFacturas : Form
     {
         private Logica.Factura MiFacturaLocal { get; set; }
-
+        private bool FlagActivar { get; set; }
         public DataTable ListaFacturasNormal { get; set; }
         public DataTable ListaFacturasConFiltro { get; set; }
 
@@ -25,6 +25,20 @@ namespace Marovi.Formularios
             MiFacturaLocal = new Logica.Factura();
          
 
+        }
+
+        private void ActivarMostrarYAnular()
+        {
+            BtnAnular.Enabled = true;
+            BtnMostrar.Enabled = true;
+
+        }
+
+        private void DesactivarMostrarYAnular()
+        {
+            BtnAnular.Enabled = false;
+            BtnMostrar.Enabled = false;
+            
         }
 
         private void LlenarListaFacturas(bool VerActivos, string FiltroBusqueda = "")
@@ -49,6 +63,7 @@ namespace Marovi.Formularios
         {
             MdiParent = Locales.ObjetosGlobales.MiFormPrincipal;
             LlenarListaFacturas(CbVerFacturasActivas.Checked);
+            
         }
 
         private void TxtBuscar_TextChanged(object sender, EventArgs e)
@@ -116,6 +131,14 @@ namespace Marovi.Formularios
         {
             LlenarListaFacturas(CbVerFacturasActivas.Checked);
 
+            if (CbVerFacturasActivas.Checked)
+            {
+                ActivarMostrarYAnular();
+            }
+            else
+            {
+                DesactivarMostrarYAnular();
+            }
         }
     }
 }
